@@ -1,18 +1,28 @@
-alias ls="ls -FGC"
-alias la="ls -a"
-alias ll="ls -l"
-alias lal="ls -al"
-
-#alias less="less -N"
+alias ls="ls -FGC" # add / to dirs, enable color, columns
+alias la="ls -a" # include hidden
+alias ll="ls -lh" # long with human-readable file size
+alias lal="ls -al" # you can figure this one out
 
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
-alias ee="e -n"
+alias ee="e -n" # don't wait to finish editing
 
 alias h="history"
 alias hl="history | less"
 
+alias tu="top -o cpu" # cpu
+alias tm="top -o vsize" # memory
 
+alias g="git status"
 
+alias ...="cd .."
+alias cdd="cd -"
+alias pu="pushd"
+alias po="popd"
+
+alias reload="source ~/.bashrc"
+alias manage="ee ~/Dropbox/bin/dotfiles/bash"
+
+alias p="pbcopy"
 
 
 

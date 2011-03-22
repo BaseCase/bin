@@ -1,2 +1,2 @@
 export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
-export PATH=$PATH:/usr/games:$DOTFILES_HOME/bin    #colon separated
+export PATH=$PATH:/usr/games:$CJB_BIN    #colon separated

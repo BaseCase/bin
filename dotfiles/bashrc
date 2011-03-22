@@ -1,7 +1,7 @@
-DOTFILES_HOME="/Users/cjb/Dropbox/dotfiles"
-. $DOTFILES_HOME/bash/env
-. $DOTFILES_HOME/bash/config
-. $DOTFILES_HOME/bash/aliases
+# using CJB_BIN from ~/.bashrc
+. $CJB_BIN/dotfiles/bash/env
+. $CJB_BIN/dotfiles/bash/config
+. $CJB_BIN/dotfiles/bash/aliases
 
 
 
