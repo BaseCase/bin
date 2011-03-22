@@ -6,7 +6,12 @@ You'll need a .bashrc in ~ that looks something kinda like this:
 Put this repo in the right spot and that should be all the setup you need.
 Happy bashing!
 
+### inputrc
+
 If you want inputrc to work, then:
 
-   sudo ln -s ~/Dropbox/bin/dotfiles/inputrc /etc/inputrc
+     sudo ln -s ~/Dropbox/bin/dotfiles/inputrc /etc/inputrc
+
+----------
+
 
