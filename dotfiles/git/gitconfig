@@ -1,0 +1,15 @@
+[user]
+	name = Casey Brant
+	email = casey.brant@gmail.com
+[merge]
+	tool = vimdiff
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
