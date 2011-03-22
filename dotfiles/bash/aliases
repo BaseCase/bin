@@ -1,0 +1,23 @@
+alias ls="ls -FGC"
+alias la="ls -a"
+alias ll="ls -l"
+alias lal="ls -al"
+
+#alias less="less -N"
+
+alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+alias ee="e -n"
+
+alias h="history"
+alias hl="history | less"
+
+
+
+
+
+
+
+function take {
+    mkdir $1
+    cd $1
+}

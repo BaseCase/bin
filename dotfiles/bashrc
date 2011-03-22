@@ -1,0 +1,22 @@
+DOTFILES_HOME="/Users/cjb/Dropbox/dotfiles"
+. $DOTFILES_HOME/bash/env
+. $DOTFILES_HOME/bash/config
+. $DOTFILES_HOME/bash/aliases
+
+
+
+
+
+
+
+
+
+
+
+# Casey's old stuff (pre-peepcode)
+
+
+
+export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+
+source ~/.git-completion.bash
