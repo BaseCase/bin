@@ -8,5 +8,5 @@ Happy bashing!
 
 If you want inputrc to work, then:
 
-   sudo ln -s ~/Dropbox/bin/dotfiles/inputrc /etc/inputrc
+      sudo ln -s ~/Dropbox/bin/dotfiles/inputrc /etc/inputrc
 
