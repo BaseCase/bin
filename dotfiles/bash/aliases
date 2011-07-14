@@ -26,10 +26,15 @@ alias p="pbcopy"
 
 alias rm="safe_rm"
 
+alias grp="easy_grep"
 
 function take {
     mkdir $1
     cd $1
+}
+
+function easy_grep {
+    grep -nIr $1 .
 }
 
 # stolen from http://jayallen.org/journey/2006/03/mac_os_x_rm_files_to_trash
