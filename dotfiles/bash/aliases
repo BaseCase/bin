@@ -13,6 +13,7 @@ alias tu="top -o cpu" # cpu
 alias tm="top -o vsize" # memory
 
 alias g="git status"
+alias gitc="git diff --cached"
 
 alias ...="cd .."
 alias cdd="cd -"
