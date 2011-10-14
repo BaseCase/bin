@@ -25,8 +25,6 @@ alias manage="ee ~/Dropbox/bin/dotfiles/bash"
 
 alias p="pbcopy"
 
-alias rm="safe_rm"
-
 alias grp="easy_grep"
 
 function take {
