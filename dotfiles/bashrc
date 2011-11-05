@@ -2,8 +2,8 @@
 . $CJB_BIN/dotfiles/bash/env
 . $CJB_BIN/dotfiles/bash/config
 . $CJB_BIN/dotfiles/bash/aliases
-
-
+. $CJB_BIN/dotfiles/bash/inputrc
+. $CJB_BIN/git-completion.bash
 
 
 
@@ -17,6 +17,6 @@
 
 
 
-export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+#export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
 
-source ~/.git-completion.bash
+#source ~/.git-completion.bash
