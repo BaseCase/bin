@@ -23,6 +23,8 @@ alias po="popd"
 alias reload="source ~/.bashrc"
 alias manage="ee ~/Dropbox/bin/dotfiles/bash"
 
+alias s="mdfind -onlyin ."
+
 alias p="pbcopy"
 
 alias grp="easy_grep"
