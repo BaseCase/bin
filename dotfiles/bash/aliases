@@ -19,8 +19,11 @@ alias hl="history | less"
 alias tu="top -o cpu" # cpu
 alias tm="top -o vsize" # memory
 
+#git!
 alias g="git status"
 alias gitc="git diff --cached"
+alias st="git stash"
+alias ap="git stash apply"
 
 alias ...="cd .."
 alias cdd="cd -"
