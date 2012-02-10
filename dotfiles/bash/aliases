@@ -24,6 +24,7 @@ alias g="git status"
 alias gitc="git diff --cached"
 alias st="git stash"
 alias ap="git stash apply"
+alias pretty="git log --pretty=oneline --graph"
 
 alias ...="cd .."
 alias cdd="cd -"
