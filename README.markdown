@@ -1,17 +1,6 @@
-You'll need a .bashrc in ~ that looks something kinda like this:
+Bash config
+-----------
 
-       CJB_BIN="/Users/cjb/Dropbox/bin"
-       source $CJB_BIN/dotfiles/bashrc
+### setup ###
 
-Put this repo in the right spot and that should be all the setup you need.
-Happy bashing!
-
-### inputrc
-
-If you want inputrc to work, then:
-
-     sudo ln -s ~/Dropbox/bin/dotfiles/inputrc /etc/inputrc
-
-----------
-
-
+`cp .bashrc .bash_profile .inputrc ~`
