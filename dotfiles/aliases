@@ -40,6 +40,8 @@ alias p="pbcopy"
 
 alias grp="easy_grep"
 
+alias djrun="./manage.py runserver"
+
 function take {
     mkdir $1
     cd $1
