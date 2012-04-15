@@ -10,7 +10,7 @@ alias space='open ~/soma/spacestation130.pls'
 alias bass='open ~/soma/BassDrive3.pls'
 alias dub='open ~/soma/dubstep.pls'
 
-alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+alias e="/usr/local/Cellar/emacs/HEAD/bin/emacsclient"
 alias ee="e -n" # don't wait to finish editing
 
 alias h="history"
@@ -25,6 +25,7 @@ alias gitc="git diff --cached"
 alias st="git stash"
 alias ap="git stash apply"
 alias pretty="git log --pretty=oneline --graph"
+alias gfg="git fetch github"
 
 alias ...="cd .."
 alias cdd="cd -"
