@@ -9,5 +9,6 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 
 # temp Java stuff for GOOS examples
-export CLASSPATH="/Users/cjb/goos/lib/'*'"
+export CLASSPATH=".:/Users/cjb/java/junit-4.10.jar"
 alias java="java -cp $CLASSPATH"
+alias javac="javac -cp $CLASSPATH"
