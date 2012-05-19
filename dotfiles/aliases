@@ -2,21 +2,7 @@ alias ls="ls -FGC" # add / to dirs, enable color, columns
 alias la="ls -a" # include hidden
 alias ll="ls -lh" # long with human-readable file size
 alias lal="ls -al" # you can figure this one out
-
-#tunes!
-alias drone='open ~/soma/dronezone.pls'
-alias groove='open ~/soma/groovesalad130.pls'
-alias space='open ~/soma/spacestation130.pls'
-alias bass='open ~/soma/BassDrive3.pls'
-alias dub='open ~/soma/dubstep.pls'
-
-alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
-
-alias h="history"
-alias hl="history | less"
-
-alias tu="top -o cpu" # cpu
-alias tm="top -o vsize" # memory
+alias p="pbcopy"
 
 #git!
 alias g="git status"
@@ -25,61 +11,3 @@ alias st="git stash"
 alias ap="git stash apply"
 alias pretty="git log --pretty=oneline --graph"
 alias gfg="git fetch github"
-
-alias ...="cd .."
-alias cdd="cd -"
-alias pu="pushd"
-alias po="popd"
-
-alias reload="source ~/.bashrc"
-alias manage="ee ~/Dropbox/bin/dotfiles/bash"
-
-alias s="mdfind -onlyin ."
-
-alias p="pbcopy"
-
-alias grp="easy_grep"
-
-alias djrun="./manage.py runserver"
-
-function take {
-    mkdir $1
-    cd $1
-}
-
-function easy_grep {
-    grep -nIr $1 .
-}
-
-# stolen from http://jayallen.org/journey/2006/03/mac_os_x_rm_files_to_trash
-safe_rm() # Safe rm procedure
-{
-    # Cycle through each argument for deletion
-    for file in $*; do
-        if [ -e $file ]; then
-
-            # Target exists and can be moved to Trash safely
-            if [ ! -e ~/.Trash/$file ]; then
-                mv $file ~/.Trash
-
-            # Target exists and conflicts with target in Trash
-            elif [ -e ~/.Trash/$file ]; then
-
-                # Increment target name until 
-                # there is no longer a conflict
-                i=1
-                while [ -e ~/.Trash/$file.$i ];
-                do
-                    i=$(($i + 1))
-                done
-
-                # Move to the Trash with non-conflicting name
-                mv $file ~/.Trash/$file.$i
-            fi
-
-        # Target doesn't exist, return error
-        else
-            echo "rm: $file: No such file or directory";
-        fi
-    done
-}
