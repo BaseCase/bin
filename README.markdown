@@ -3,4 +3,4 @@ Bash config
 
 ### setup ###
 
-`cp .bashrc .bash_profile .inputrc ~`
+TODO: make an install script for this.
