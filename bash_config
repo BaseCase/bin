@@ -1,0 +1,32 @@
+# using CJB_BIN from ~/.bashrc
+. $CJB_BIN/scripts/git-completion.bash
+
+### ENVIRONMENT ###
+export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin:/opt/local/bin:/opt/local/sbin:/usr/games:/Users/cjb/bin/scripts
+export NODE_PATH=/usr/local/lib/node_modules
+export CLASSPATH=".:/Users/cjb/java/junit-4.10.jar"
+
+### ALIASES ###
+alias ls="ls -FGC" # add / to dirs, enable color, columns
+alias la="ls -a" # include hidden
+alias ll="ls -lh" # long with human-readable file size
+alias lal="ls -al" # you can figure this one out
+alias p="pbcopy"
+alias java="java -cp $CLASSPATH"
+alias javac="javac -cp $CLASSPATH"
+alias g="git status"
+alias gitc="git diff --cached"
+alias st="git stash"
+alias ap="git stash apply"
+alias pretty="git log --pretty=oneline --graph"
+alias gfg="git fetch github"
+
+#special colors
+NO_COLOR='\e[0m'
+EYELLOW='\e[1;33m'
+
+# CUSTOM PROMPT:
+# MY_NAME:WORKING_DIRECTORY GIT_PROMPT
+# $ 
+PS1="\n\u:\w \[$EYELLOW\]\$(vcprompt)\[$NO_COLOR\] \n$ "
