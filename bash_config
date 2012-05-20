@@ -22,11 +22,7 @@ alias ap="git stash apply"
 alias pretty="git log --pretty=oneline --graph"
 alias gfg="git fetch github"
 
-#special colors
+### CUSTOM PROMPT ###
 NO_COLOR='\e[0m'
 EYELLOW='\e[1;33m'
-
-# CUSTOM PROMPT:
-# MY_NAME:WORKING_DIRECTORY GIT_PROMPT
-# $ 
-PS1="\n\u:\w \[$EYELLOW\]\$(vcprompt)\[$NO_COLOR\] \n$ "
+PS1="\n\u:\w \[$EYELLOW\]\$(vcprompt)\[$NO_COLOR\] \n$ " # MY_NAME:WORKING_DIRECTORY GIT_PROMPT
