@@ -1,5 +1,4 @@
 # using CJB_BIN from ~/.bashrc
-. $CJB_BIN/dotfiles/config
 . $CJB_BIN/scripts/git-completion.bash
 
 ### ENVIRONMENT ###
@@ -22,3 +21,12 @@ alias st="git stash"
 alias ap="git stash apply"
 alias pretty="git log --pretty=oneline --graph"
 alias gfg="git fetch github"
+
+#special colors
+NO_COLOR='\e[0m'
+EYELLOW='\e[1;33m'
+
+# CUSTOM PROMPT:
+# MY_NAME:WORKING_DIRECTORY GIT_PROMPT
+# ->
+PS1="\n\u:\w \[$EYELLOW\]\$(vcprompt)\[$NO_COLOR\] \n→ "
