@@ -1,2 +1,2 @@
 CJB_BIN="/Users/cjb/bin"
-source $CJB_BIN/dotfiles/bashrc
+source $CJB_BIN/bash_config
