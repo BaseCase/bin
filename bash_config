@@ -21,6 +21,7 @@ alias st="git stash"
 alias ap="git stash apply"
 alias pretty="git log --pretty=oneline --graph"
 alias gfg="git fetch github"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
 ### CUSTOM PROMPT ###
 NO_COLOR='\e[0m'
