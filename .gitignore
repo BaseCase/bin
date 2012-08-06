@@ -1,0 +1,3 @@
+scripts/forward_search_ports.sh
+scripts/post_json_proxy.py
+local_bash_config

@@ -28,3 +28,5 @@ alias sr="screen -r"
 NO_COLOR='\e[0m'
 EYELLOW='\e[1;33m'
 PS1="\n\u:\w \[$EYELLOW\]\$(vcprompt)\[$NO_COLOR\] \n$ " # MY_NAME:WORKING_DIRECTORY GIT_PROMPT
+
+source $CJB_BIN/local_bash_config
