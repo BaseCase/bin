@@ -23,6 +23,7 @@ alias pretty="git log --pretty=oneline --graph"
 alias gfg="git fetch github"
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias sr="screen -r"
+alias trains="open -a /Applications/Google\ Chrome.app/ http://www.caltrain.com/schedules/weekdaytimetable.html"
 
 ### CUSTOM PROMPT ###
 NO_COLOR='\e[0m'
