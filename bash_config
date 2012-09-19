@@ -8,21 +8,21 @@ export NODE_PATH=/usr/local/lib/node_modules
 export CLASSPATH=".:/Users/cjb/java/junit-4.10.jar"
 
 ### ALIASES ###
-alias ls="ls -FGC" # add / to dirs, enable color, columns
-alias la="ls -a" # include hidden
-alias ll="ls -lh" # long with human-readable file size
-alias lal="ls -al" # you can figure this one out
-alias p="pbcopy"
+alias ap="git stash apply"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias g="git status"
+alias gfg="git fetch github"
+alias gitc="git diff --cached"
 alias java="java -cp $CLASSPATH"
 alias javac="javac -cp $CLASSPATH"
-alias g="git status"
-alias gitc="git diff --cached"
-alias st="git stash"
-alias ap="git stash apply"
+alias la="ls -a" # include hidden
+alias lal="ls -al" # you can figure this one out
+alias ll="ls -lh" # long with human-readable file size
+alias ls="ls -FGC" # add / to dirs, enable color, columns
+alias p="pbcopy"
 alias pretty="git log --pretty=oneline --graph"
-alias gfg="git fetch github"
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias sr="screen -r"
+alias st="git stash"
 alias trains="open -a /Applications/Google\ Chrome.app/ http://www.caltrain.com/schedules/weekdaytimetable.html"
 
 ### CUSTOM PROMPT ###
