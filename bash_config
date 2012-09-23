@@ -24,6 +24,7 @@ alias pretty="git log --pretty=oneline --graph"
 alias sr="screen -r"
 alias st="git stash"
 alias trains="open -a /Applications/Google\ Chrome.app/ http://www.caltrain.com/schedules/weekdaytimetable.html"
+alias venv="source venv/bin/activate"
 
 ### CUSTOM PROMPT ###
 NO_COLOR='\e[0m'
