@@ -9,7 +9,7 @@ export CLASSPATH=".:/Users/cjb/java/junit-4.10.jar"
 
 ### ALIASES ###
 alias ap="git stash apply"
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 alias g="git status"
 alias gfg="git fetch github"
 alias gitc="git diff --cached"
