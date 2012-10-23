@@ -1,0 +1,3 @@
+hardstatus alwayslastline
+hardstatus string "%{= kG} %-w [ %n %t ] %+w"
+bind ^a meta
