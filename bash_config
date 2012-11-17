@@ -9,6 +9,7 @@ export NODE_PATH=/usr/local/lib/node_modules
 ### ALIASES ###
 alias ap="git stash apply"
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+alias forward="$CJB_BIN/scripts/forward_port.sh"
 alias g="git status"
 alias gfg="git fetch github"
 alias gitc="git diff --cached"
