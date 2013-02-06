@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# This is stolen directly from Gary Bernhardt's config, which he has
+# on his dotfiles repo on GitHub, and also explains in depth in Destroy
+# All Software episode #63 - Pretty Git Logs.
+
+HASH="%C(yellow)%h%Creset"
+RELATIVE_TIME="%Cgreen(%ar)%Creset"
+AUTHOR="%C(bold blue)<%an>%Creset"
+REFS="%C(red)%d%Creset"
+SUBJECT="%s"
+
+FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
+
+pretty_git_log() {
+    git log --graph --pretty="tformat:${FORMAT}" $* |
+    # Replace (2 years ago) with (2 years)
+    sed -Ee 's/(^[^<]*) ago\)/\1)/' |
+    # Replace (2 years, 5 months) with (2 years)
+    sed -Ee 's/(^[^<]*), [[:digit:]]+ .*months?\)/\1)/' |
+    # Line columns up based on } delimiter
+    column -s '}' -t |
+    # page only if we need to
+    less -FXRS
+}
