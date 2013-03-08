@@ -1,4 +1,3 @@
-# using CJB_BIN from ~/.bashrc
 export PATH="\
 /usr/bin:\
 /bin:\
@@ -8,7 +7,9 @@ export PATH="\
 /Users/cjb/bin/scripts:\
 "
 
-alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+
+alias e=$EDITOR
 alias forward="$CJB_BIN/scripts/forward_port.sh"
 alias g="git status"
 alias gfg="git fetch github"
@@ -20,10 +21,12 @@ alias lal="ll -a"
 alias p="pbcopy"
 alias venv="source venv/bin/activate"
 
+# prompt is this:
+# cjb:~/bin [git:master+]
+# $
 NO_COLOR='\e[0m'
 EYELLOW='\e[1;33m'
-PS1="\n\u:\w \[$EYELLOW\]\$(vcprompt)\[$NO_COLOR\] \n$ " # MY_NAME:WORKING_DIRECTORY GIT_PROMPT
+PS1="\n\u:\w \[$EYELLOW\]\$(vcprompt)\[$NO_COLOR\] \n$ "
 
-export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
 source $CJB_BIN/scripts/git-completion.bash
 source $CJB_BIN/local_bash_config
