@@ -1,8 +1,4 @@
 # using CJB_BIN from ~/.bashrc
-. $CJB_BIN/scripts/git-completion.bash
-
-### ENVIRONMENT ###
-export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
 export PATH="\
 /usr/bin:\
 /bin:\
@@ -12,7 +8,6 @@ export PATH="\
 /Users/cjb/bin/scripts:\
 "
 
-### ALIASES ###
 alias ap="git stash apply"
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 alias forward="$CJB_BIN/scripts/forward_port.sh"
@@ -33,9 +28,10 @@ alias st="git stash"
 alias trains="open -a /Applications/Google\ Chrome.app/ http://www.caltrain.com/schedules/weekdaytimetable.html"
 alias venv="source venv/bin/activate"
 
-### CUSTOM PROMPT ###
 NO_COLOR='\e[0m'
 EYELLOW='\e[1;33m'
 PS1="\n\u:\w \[$EYELLOW\]\$(vcprompt)\[$NO_COLOR\] \n$ " # MY_NAME:WORKING_DIRECTORY GIT_PROMPT
 
+export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+source $CJB_BIN/scripts/git-completion.bash
 source $CJB_BIN/local_bash_config
