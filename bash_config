@@ -3,7 +3,14 @@
 
 ### ENVIRONMENT ###
 export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
-export PATH=$PATH:$CJB_BIN/scripts
+export PATH="\
+/usr/bin:\
+/bin:\
+/usr/sbin:\
+/sbin:\
+/usr/local/bin:\
+/Users/cjb/bin/scripts:\
+"
 
 ### ALIASES ###
 alias ap="git stash apply"
