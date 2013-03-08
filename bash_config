@@ -8,24 +8,16 @@ export PATH="\
 /Users/cjb/bin/scripts:\
 "
 
-alias ap="git stash apply"
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 alias forward="$CJB_BIN/scripts/forward_port.sh"
 alias g="git status"
 alias gfg="git fetch github"
 alias gho="github_open.sh"
 alias gitc="git diff --cached"
-alias java="java -cp $CLASSPATH"
-alias javac="javac -cp $CLASSPATH"
-alias la="ls -a" # include hidden
-alias lal="ls -al" # you can figure this one out
-alias ll="ls -lh" # long with human-readable file size
-alias ls="ls -FGC" # add / to dirs, enable color, columns
+alias ls="ls -FGC"
+alias ll="ls -lh"
+alias lal="ll -a"
 alias p="pbcopy"
-alias pretty="git log --pretty=oneline --graph"
-alias sr="screen -r"
-alias st="git stash"
-alias trains="open -a /Applications/Google\ Chrome.app/ http://www.caltrain.com/schedules/weekdaytimetable.html"
 alias venv="source venv/bin/activate"
 
 NO_COLOR='\e[0m'
