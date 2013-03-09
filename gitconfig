@@ -13,7 +13,7 @@
     br = branch
     ci = commit
     st = status
-    l = "!. ~/bin/githelpers && pretty_git_log"
-    r = "! git l -20"
+    l = "!. ~/bin/scripts/githelpers && pretty_git_log"
+    r = "!git l -20"
 [github]
     user = basecase
