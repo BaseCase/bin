@@ -1,6 +1,5 @@
-Bash config
------------
+# cjb's bash config
 
-### setup ###
+## setup
 
-TODO: make an install script for this.
+cd to the `bin/` folder, make any edits to the dotfiles and then run `./install.sh`
