@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# start MySQL
+cd ~
 mysql.server start
-
-# start screen session
 screen -d -m
 
 # make screen for redis
