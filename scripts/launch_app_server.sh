@@ -25,7 +25,13 @@ screen -p 2 -X stuff './manage.py run_websocket_server'
 # make screen for websocket worker
 screen -X screen
 screen -p 3 -X title "websocket_worker"
-screen -p 3 -X stuff 'echo "whaaat"'
 screen -p 3 -X stuff 'source ~/code/venvs/APPURIFY/bin/activate'
 screen -p 3 -X stuff 'cd ~/code/Appurify/django'
 screen -p 3 -X stuff './manage.py run_websocket_worker'
+
+# make screen for celery worker
+screen -X screen
+screen -p 4 -X title "celery"
+screen -p 4 -X stuff 'source ~/code/venvs/APPURIFY/bin/activate'
+screen -p 4 -X stuff 'cd ~/code/Appurify/django'
+screen -p 4 -X stuff './manage.py celery worker -l INFO'
