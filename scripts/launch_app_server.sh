@@ -1,37 +1,29 @@
 #!/bin/bash
 
-cd ~
-mysql.server start
-screen -d -m
+function setup () {
+    cd ~
+    mysql.server start
+    screen -d -m
+}
 
-# make screen for redis
+last_screen_number=0
+function run_on_new_screen () {
+    let last_screen_number++
+    name="$1"
+    command="$2"
+    screen -X screen
+    screen -p $last_screen_number -X title $name
+    screen -p $last_screen_number -X stuff 'source ~/code/venvs/APPURIFY/bin/activate'
+    screen -p $last_screen_number -X stuff 'cd ~/code/Appurify/django'
+    screen -p $last_screen_number -X stuff "$command"
+}
+
+setup
+
 screen -p 0 -X title "redis"
 screen -p 0 -X stuff 'redis-server'
 
-# make screen for django dev server
-screen -X screen
-screen -p 1 -X title "django"
-screen -p 1 -X stuff 'source ~/code/venvs/APPURIFY/bin/activate'
-screen -p 1 -X stuff 'cd ~/code/Appurify/django'
-screen -p 1 -X stuff './manage.py runserver --nothreading'
-
-# make screen for websocket server
-screen -X screen
-screen -p 2 -X title "websocket_server"
-screen -p 2 -X stuff 'source ~/code/venvs/APPURIFY/bin/activate'
-screen -p 2 -X stuff 'cd ~/code/Appurify/django'
-screen -p 2 -X stuff './manage.py run_websocket_server'
-
-# make screen for websocket worker
-screen -X screen
-screen -p 3 -X title "websocket_worker"
-screen -p 3 -X stuff 'source ~/code/venvs/APPURIFY/bin/activate'
-screen -p 3 -X stuff 'cd ~/code/Appurify/django'
-screen -p 3 -X stuff './manage.py run_websocket_worker'
-
-# make screen for celery worker
-screen -X screen
-screen -p 4 -X title "celery"
-screen -p 4 -X stuff 'source ~/code/venvs/APPURIFY/bin/activate'
-screen -p 4 -X stuff 'cd ~/code/Appurify/django'
-screen -p 4 -X stuff './manage.py celery worker -l INFO'
+run_on_new_screen 'django' './manage.py runserver --nothreading'
+run_on_new_screen 'websocket_server' './manage.py run_websocket_server'
+run_on_new_screen 'websocket_worker' './manage.py run_websocket_worker'
+run_on_new_screen 'celery' './manage.py celery worker -l INFO'
