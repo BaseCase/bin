@@ -8,6 +8,7 @@ export PATH="\
 "
 
 export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+export HISTFILESIZE=1000000
 
 alias e=$EDITOR
 alias forward="$CJB_BIN/scripts/forward_port.sh"
