@@ -8,7 +8,7 @@ export PATH="\
 /Users/cjb/bin/scripts:\
 "
 
-export EDITOR=/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
+export EDITOR="vim"
 export HISTFILESIZE=1000000
 export NODE_PATH="/usr/local/lib/node_modules"
 
@@ -23,6 +23,7 @@ alias ll="ls -lh"
 alias lal="ll -a"
 alias p="pbcopy"
 alias venv="source venv/bin/activate"
+alias vim="vim -N"
 
 # prompt is this:
 # cjb:~/bin [git:master+]
