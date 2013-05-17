@@ -3,6 +3,7 @@
     email = casey.brant@gmail.com
 [merge]
     tool = vimdiff
+    conflictstyle = diff3
 [color]
     status = auto
     branch = auto
