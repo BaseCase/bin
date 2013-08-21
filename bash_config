@@ -26,6 +26,7 @@ alias ls="ls -FGC"
 alias l="ls -lh"
 alias lal="l -a"
 alias p="pbcopy"
+alias plz="sudo"
 alias venv="source venv/bin/activate"
 alias vim="vim -N"
 
