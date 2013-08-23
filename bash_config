@@ -29,6 +29,7 @@ alias p="pbcopy"
 alias plz="sudo"
 alias venv="source venv/bin/activate"
 alias vim="vim -N"
+alias x="xargs"
 
 # prompt is this:
 # cjb:~/bin [git:master+]
