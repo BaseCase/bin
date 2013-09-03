@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 current_git_branch() {
     git status |
     grep "# On branch" |
