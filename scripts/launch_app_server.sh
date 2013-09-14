@@ -24,8 +24,7 @@ screen -p 0 -X title "redis"
 screen -p 0 -X stuff 'redis-server'
 
 run_on_new_screen 'django' './manage.py runserver --nothreading'
-run_on_new_screen 'websocket_server' './manage.py run_websocket_server'
-run_on_new_screen 'websocket_worker' './manage.py run_websocket_worker'
+run_on_new_screen 'websocket_server' './manage.py start_push_server'
 run_on_new_screen 'celery' './manage.py celery worker --beat'
 run_on_new_screen 'rabbitmq' 'rabbitmq-server'
 run_on_new_screen 'grunt' 'cd static/new; grunt dev'
