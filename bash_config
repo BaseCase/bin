@@ -26,7 +26,7 @@ alias gm="git_merge_current_remote_branch"
 alias grep="grep --color=auto -E"
 alias gtci="gitc"
 alias gtic="gitc"
-alias jsgrep='find . -type f -and \( -name "*.coffee" -or -name "*.js" \) | xargs grep -E --color=auto'
+alias jsgrep='find . -type f -and \( -name "*.coffee" -or -name "*.js" -or -name "*.hbs" \) | xargs grep -E --color=auto'
 alias json="python -m json.tool"
 alias l="ls -lh"
 alias lal="l -a"
