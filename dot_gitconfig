@@ -1,8 +1,6 @@
 [user]
     name = Casey Brant
     email = casey.brant@gmail.com
-[merge]
-    tool = vimdiff
 [color]
     status = auto
     branch = auto
@@ -13,7 +11,5 @@
     br = branch
     ci = commit
     st = status
-    l = "!. ~/bin/scripts/githelpers && pretty_git_log"
-    r = "!git l -20"
 [github]
     user = basecase
