@@ -14,6 +14,7 @@ export PATH="\
 export EDITOR="vim"
 export HISTFILESIZE=1000000
 export NODE_PATH="/usr/local/lib/node_modules"
+export PYTHONDONTWRITEBYTECODE=1
 
 alias djgrep='find . -type f -and -name "*.py" -and -not -path "*migrations*" -print0 | xargs -0 grep -E --color=auto'
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
