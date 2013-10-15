@@ -11,5 +11,6 @@
     br = branch
     ci = commit
     st = status
+    rbc = rebase --continue
 [github]
     user = basecase
