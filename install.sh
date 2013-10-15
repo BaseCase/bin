@@ -1,7 +1,9 @@
 #!/bin/bash
 
-for f in `find . -name "dot_*" -maxdepth 1 | xargs`
+set -e
+
+for source_file in $(find . -name "dot_*" -maxdepth 1)
 do
-    new_loc=`echo $f | sed s:.*dot_:$HOME/\.:`
-    cp -v "$f" "$new_loc"
+    target_file=${source_file/.\/dot_/.}
+    ln -fs `pwd`/$source_file ~/$target_file
 done
