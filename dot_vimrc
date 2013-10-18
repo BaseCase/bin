@@ -1,0 +1,22 @@
+set nocompatible
+autocmd!
+filetype on
+filetype plugin on
+filetype indent on
+set hidden
+set showmode
+set lazyredraw
+set background=dark
+syntax enable
+set number
+highlight LineNr ctermfg=darkGrey
+set hlsearch
+set ruler
+set ignorecase smartcase
+set incsearch
+set cmdheight=2
+autocmd BufWritePre * :%s/\s\+$//e
+set tabstop=4
+set expandtab
+set shiftwidth=4
+
