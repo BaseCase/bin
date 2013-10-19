@@ -21,35 +21,52 @@ export PYTHONDONTWRITEBYTECODE=1
 export HISTSIZE=100000
 shopt -s histappend
 
-alias djgrep='find . -type f -and -name "*.py" -and -not -path "*migrations*" -print0 | xargs -0 grep -E --color=auto'
-alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
-alias forward="$CJB_BIN/scripts/forward_port.sh"
+
+##########
+# ALIASES
+##########
+
+# git aliases
 alias g="git status"
 alias gfg="git fetch github"
-alias gho="github_open.sh"
 alias gitc="git diff --cached"
+
+# open this project on github
+alias gho="github_open.sh"
+
+# merge github version of this branch with local
 alias gm="git_merge_current_remote_branch"
-alias grep="grep --color=auto -E"
+
+# spelling is hard
 alias gtci="gitc"
 alias gtic="gitc"
-alias jsgrep='find . -type f -and \( -name "*.coffee" -or -name "*.js" -or -name "*.hbs" \) -print0 | xargs -0 grep -E --color=auto'
-alias json="python -m json.tool"
-alias l="ls -lh"
-alias lal="l -a"
+
+# grep stuff
+alias grep="grep --color=auto -E"
+alias jsgrep='find . -type f -and \( -name "*.coffee" -or -name "*.js" -or -name "*.hbs" \) -print0 | xargs -0 grep'
+alias pygrep='find . -type f -and -name "*.py" -and -not -path "*migrations*" -print0 | xargs -0 grep'
+
+# ls better
 alias ls="ls -FGC"
+alias l="ls -lh"
+alias la="l -a"
+
+# random helpers
+alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
+alias json="python -m json.tool"
 alias msp="./manage.py shell_plus"
 alias p="pbcopy"
-alias plz="sudo"
-alias venv="source venv/bin/activate"
-alias vim="vim -N"
 alias x="xargs"
 
-# prompt is this:
-# cjb:~/bin [git:master+]
-# $
+
+#########
+# Prompt
+#########
+
 NO_COLOR='\e[0m'
 EYELLOW='\e[1;33m'
 PS1="\n\u:\w \[$EYELLOW\]\$(vcprompt)\[$NO_COLOR\] \n$ "
+
 
 source $CJB_BIN/scripts/git-completion.bash
 source $CJB_BIN/scripts/random_functions.sh

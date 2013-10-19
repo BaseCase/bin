@@ -9,3 +9,4 @@ current_git_branch() {
 git_merge_current_remote_branch() {
     git merge github/$(current_git_branch)
 }
+
