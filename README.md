@@ -12,3 +12,7 @@ Any file in this folder named "dot\_\*" will be included in the install process.
 
 Any file in the scripts/ folder is in the path, so just put anything here and make it executable to get it everywhere.
 
+## local bash config
+
+You can put any config stuff you don't want public in the local\_bash\_config file. It's gitignored, so go nuts.
+

@@ -12,9 +12,14 @@ export PATH="\
 "
 
 export EDITOR="vim"
-export HISTFILESIZE=1000000
 export NODE_PATH="/usr/local/lib/node_modules"
+
+# no .pyc files
 export PYTHONDONTWRITEBYTECODE=1
+
+# lots of history, and append it to histfile instead of overwriting
+export HISTSIZE=100000
+shopt -s histappend
 
 alias djgrep='find . -type f -and -name "*.py" -and -not -path "*migrations*" -print0 | xargs -0 grep -E --color=auto'
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
@@ -49,3 +54,4 @@ PS1="\n\u:\w \[$EYELLOW\]\$(vcprompt)\[$NO_COLOR\] \n$ "
 source $CJB_BIN/scripts/git-completion.bash
 source $CJB_BIN/scripts/random_functions.sh
 source $CJB_BIN/local_bash_config
+
