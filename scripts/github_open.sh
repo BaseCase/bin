@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function github {
+function get_github_url {
     git remote show -n github |
     grep Fetch |
     cut -d @ -f 2 |
@@ -9,4 +9,5 @@ function github {
     sed s#^#https://#
 }
 
-open `github`
+open `get_github_url`
+
