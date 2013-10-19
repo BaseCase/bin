@@ -20,3 +20,7 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 
+" make j and k behave on visual lines, not numeric lines
+map j gj
+map k gk
+
