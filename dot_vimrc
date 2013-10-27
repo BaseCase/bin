@@ -24,3 +24,5 @@ set shiftwidth=4
 map j gj
 map k gk
 
+colorscheme vividchalk
+
