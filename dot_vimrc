@@ -25,4 +25,5 @@ map j gj
 map k gk
 
 colorscheme vividchalk
+set scrolloff=3
 
