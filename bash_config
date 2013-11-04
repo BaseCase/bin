@@ -56,6 +56,7 @@ alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
 alias json="python -m json.tool"
 alias msp="./manage.py shell_plus"
 alias p="pbcopy"
+alias py="python"
 alias x="xargs"
 
 
