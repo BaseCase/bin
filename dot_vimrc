@@ -8,7 +8,6 @@ set showmode
 set lazyredraw
 set background=dark
 syntax enable
-set number
 highlight LineNr ctermfg=darkGrey
 set hlsearch
 set ruler
@@ -26,4 +25,5 @@ map k gk
 
 colorscheme vividchalk
 set scrolloff=3
+set winwidth=80
 
