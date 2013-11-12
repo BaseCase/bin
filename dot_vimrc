@@ -26,4 +26,5 @@ map k gk
 colorscheme vividchalk
 set scrolloff=3
 set winwidth=80
+let mapleader=","
 
