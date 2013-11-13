@@ -28,3 +28,6 @@ set scrolloff=3
 set winwidth=80
 let mapleader=","
 
+map <DOWN> <C-E>
+map <UP> <C-Y>
+
