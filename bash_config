@@ -21,6 +21,9 @@ export PYTHONDONTWRITEBYTECODE=1
 export HISTSIZE=100000
 shopt -s histappend
 
+# enable color in 'ls' output, even when piping to 'less'
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
 
 ##########
 # ALIASES
@@ -49,7 +52,9 @@ alias pygrep='find . -type f -and -name "*.py" -and -not -path "*migrations*" -p
 # ls better
 alias ls="ls -FGC"
 alias l="ls -lh"
+alias ll="l | less -R"
 alias la="l -a"
+alias lal="la | less -R"
 
 # random helpers
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
