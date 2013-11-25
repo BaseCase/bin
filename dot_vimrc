@@ -30,4 +30,8 @@ let mapleader=","
 
 map <DOWN> <C-E>
 map <UP> <C-Y>
+command Q q
+
+" associate .md extension with markdown syntax
+autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
