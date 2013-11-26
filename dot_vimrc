@@ -41,3 +41,6 @@ map <leader>o :v,\v^\s*(def\|class),d<CR>
 
 set showtabline=2
 
+" copy entire current buffer to system clipboard
+map <leader>c :%w !pbcopy<CR>
+

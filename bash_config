@@ -2,12 +2,12 @@
 
 
 export PATH="\
+/usr/local/bin:\
+/usr/local/sbin:\
 /usr/bin:\
 /bin:\
 /usr/sbin:\
 /sbin:\
-/usr/local/bin:\
-/usr/local/sbin:\
 $CJB_BIN/scripts:\
 "
 
