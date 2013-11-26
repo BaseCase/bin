@@ -34,4 +34,8 @@ command Q q
 
 " associate .md extension with markdown syntax
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
+
+" "Overview" for Python files. Deletes all lines not beginning with 'class' or
+map <leader>o :v,\v^\s*(def\|class),d<CR>
 
