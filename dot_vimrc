@@ -44,3 +44,7 @@ set showtabline=2
 " copy entire current buffer to system clipboard
 map <leader>c :%w !pbcopy<CR>
 
+" gf and g] but in vertical splits
+map <leader>gf :vsp<CR> gf
+map <leader>g] :vsp<CR> g]
+
