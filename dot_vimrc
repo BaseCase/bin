@@ -36,9 +36,6 @@ command Q q
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
 
-" "Overview" for Python files. Deletes all lines not beginning with 'class' or
-map <leader>o :v,\v^\s*(def\|class),d<CR>
-
 set showtabline=2
 
 " copy entire current buffer to system clipboard
