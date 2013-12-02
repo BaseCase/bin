@@ -45,3 +45,5 @@ map <leader>c :%w !pbcopy<CR>
 map <leader>gf :vsp<CR> gf
 map <leader>g] :vsp<CR> g]
 
+set backspace=eol,indent,start
+
