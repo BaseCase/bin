@@ -47,3 +47,6 @@ map <leader>g] :vsp<CR> g]
 
 set backspace=eol,indent,start
 
+set directory=~/.backup_vim_files
+set backupdir=~/.backup_vim_files
+
