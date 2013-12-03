@@ -14,6 +14,8 @@ set ruler
 set ignorecase smartcase
 set incsearch
 set cmdheight=2
+
+" delete trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 set tabstop=4
 set expandtab
@@ -46,9 +48,9 @@ map <leader>gf :vsp<CR> gf
 map <leader>g] :vsp<CR> g]
 
 set backspace=eol,indent,start
-
 set directory=~/.backup_vim_files
 set backupdir=~/.backup_vim_files
+set list listchars=tab:→.
 
 source ~/.local_vimrc
 
