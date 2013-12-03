@@ -50,3 +50,5 @@ set backspace=eol,indent,start
 set directory=~/.backup_vim_files
 set backupdir=~/.backup_vim_files
 
+source ~/.local_vimrc
+
