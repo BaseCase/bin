@@ -51,6 +51,9 @@ set backspace=eol,indent,start
 set directory=~/.backup_vim_files
 set backupdir=~/.backup_vim_files
 set list listchars=tab:→.
+set wildignore=*.pyc
+
+map <leader>f :CommandT<cr>
 
 source ~/.local_vimrc
 

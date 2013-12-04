@@ -2,7 +2,14 @@
 
 ## setup
 
-cd to the `bin/` folder and run `./install.sh`. This will symlink the relevant files into your home directory, so you'll only need to rerun it if you add a new dotfile.
+1. cd to the `bin/` folder and run `./install.sh`. This will symlink the relevant files into your home directory, so you'll only need to rerun it if you add a new dotfile.
+2. Now compile the Command-T plugin for Vim:
+
+```bash
+cd ~/.vim/ruby/command-t
+ruby extconf.rb
+make
+```
 
 ## adding a new dotfile
 
