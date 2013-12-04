@@ -10,4 +10,5 @@ done
 
 touch local_bash_config
 touch ~/.local_vimrc
+mkdir ~/.backup
 

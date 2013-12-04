@@ -1,59 +1,52 @@
-set nocompatible
 autocmd!
-filetype on
-filetype plugin on
-filetype indent on
+
+" basic settings
+set nocompatible
+filetype plugin indent on
+set backspace=eol,indent,start
+set directory=~/.backup
+set backupdir=~/.backup
 set hidden
-set showmode
-set lazyredraw
-set background=dark
-syntax enable
-highlight LineNr ctermfg=darkGrey
 set hlsearch
-set ruler
 set ignorecase smartcase
 set incsearch
+set wildignore=*.pyc
+syntax enable
+
+" visual customizations
+set background=dark
+colorscheme vividchalk
+set cursorline
+hi CursorLine cterm=NONE ctermfg=NONE ctermbg=234
+set lazyredraw
+set showmode
+set ruler
 set cmdheight=2
+set showtabline=2
+set scrolloff=3
+set winwidth=80
 
-" delete trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
-set tabstop=4
+" whitespace settings
+autocmd BufWritePre * :%s/\s\+$//e " delete trailing whitespace on save
 set expandtab
+set list listchars=tab:→.
 set shiftwidth=4
+set tabstop=4
 
-" make j and k behave on visual lines, not numeric lines
+" custom mappings
+let mapleader=","
+command! Q q
+map <DOWN> <C-E>
+map <UP> <C-Y>
+map <leader>c :%w !pbcopy<CR>
+map <leader>f :CommandT<cr>
 map j gj
 map k gk
 
-colorscheme vividchalk
-set scrolloff=3
-set winwidth=80
-let mapleader=","
-
-map <DOWN> <C-E>
-map <UP> <C-Y>
-command Q q
-
-" associate .md extension with markdown syntax
+" type-specific configs
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
 
-set showtabline=2
-
-" copy entire current buffer to system clipboard
-map <leader>c :%w !pbcopy<CR>
-
-" gf and g] but in vertical splits
-map <leader>gf :vsp<CR> gf
-map <leader>g] :vsp<CR> g]
-
-set backspace=eol,indent,start
-set directory=~/.backup_vim_files
-set backupdir=~/.backup_vim_files
-set list listchars=tab:→.
-set wildignore=*.pyc
-
-map <leader>f :CommandT<cr>
-
+" local configs that aren't saved in the git repo
 source ~/.local_vimrc
 
