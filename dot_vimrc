@@ -1,7 +1,15 @@
 autocmd!
 
-" basic settings
+" Vundle stuff
 set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'wincent/Command-T'
+
+" basic settings
 filetype plugin indent on
 set backspace=eol,indent,start
 set directory=~/.backup
