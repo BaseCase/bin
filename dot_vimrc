@@ -19,7 +19,9 @@ set hidden
 set hlsearch
 set ignorecase smartcase
 set incsearch
+set showmatch
 set wildignore=*.pyc
+set wildmenu
 syntax enable
 
 " visual customizations
