@@ -8,6 +8,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
+Bundle 'vim-scripts/taglist.vim'
 
 " basic settings
 filetype plugin indent on
