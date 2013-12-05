@@ -51,11 +51,13 @@ map <DOWN> <C-E>
 map <UP> <C-Y>
 map <leader>c :%w !pbcopy<CR>
 map <leader>f :CommandT<cr>
+map <leader>` :set wrap!<cr>
 map j gj
 map k gk
 
 " type-specific configs
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+autocmd Filetype markdown setlocal linebreak
 autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
 
 " local configs that aren't saved in the git repo
