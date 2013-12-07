@@ -58,6 +58,7 @@ alias lal="la | less -R"
 
 # random helpers
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
+alias j="jobs"
 alias json="python -m json.tool"
 alias msp="./manage.py shell_plus"
 alias p="pbcopy"
