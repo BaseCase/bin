@@ -50,11 +50,13 @@ let mapleader=","
 command! Q q
 map <DOWN> <C-E>
 map <UP> <C-Y>
-map <leader>c :%w !pbcopy<CR>
-map <leader>f :CommandT<cr>
-map <leader>` :set wrap!<cr>
 map j gj
 map k gk
+
+map <leader>< :e ~/.local_vimrc<CR>
+map <leader>` :set wrap!<cr>
+map <leader>c :%w !pbcopy<CR>
+map <leader>f :CommandT<cr>
 
 " type-specific configs
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
