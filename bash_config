@@ -57,6 +57,7 @@ alias la="l -a"
 alias lal="la | less -R"
 
 # random helpers
+alias die_pyc="find . -name '*.pyc' -delete"
 alias e="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n"
 alias j="jobs"
 alias json="python -m json.tool"
