@@ -9,6 +9,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
 Bundle 'vim-scripts/taglist.vim'
+Bundle "pangloss/vim-javascript"
 
 " basic settings
 filetype plugin indent on
@@ -26,11 +27,11 @@ set wildmenu
 syntax enable
 
 " visual customizations
+set t_Co=256
 set background=dark
 colorscheme vividchalk
 set cursorline
 hi CursorLine cterm=NONE ctermfg=NONE ctermbg=234
-set lazyredraw
 set showmode
 set ruler
 set cmdheight=2
