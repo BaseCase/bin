@@ -2,8 +2,8 @@
 
 current_git_branch() {
     git status |
-    grep "# On branch" |
-    cut -d ' ' -f 4
+    grep "On branch" |
+    cut -d ' ' -f 3
 }
 
 git_merge_current_remote_branch() {
