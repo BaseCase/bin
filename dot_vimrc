@@ -58,6 +58,7 @@ map <leader>< :e ~/.local_vimrc<CR>
 map <leader>` :set wrap!<cr>
 map <leader>c :%w !pbcopy<CR>
 map <leader>f :CommandT<cr>
+map <leader>l :set list!<cr>
 
 " type-specific configs
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
