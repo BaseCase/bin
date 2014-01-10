@@ -32,6 +32,7 @@ set background=dark
 colorscheme vividchalk
 set cursorline
 hi CursorLine cterm=NONE ctermfg=NONE ctermbg=234
+hi Search guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 set showmode
 set ruler
 set cmdheight=2
