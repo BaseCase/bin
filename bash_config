@@ -45,7 +45,7 @@ alias gtci="gitc"
 alias gtic="gitc"
 
 # grep stuff
-alias grep="grep --color=auto -E"
+alias grep="grep --color=auto -E --exclude=tags"
 alias jsgrep='find . -type f -and \( -name "*.coffee" -or -name "*.js" -or -name "*.hbs" \) -print0 | xargs -0 grep'
 alias pygrep='find . -type f -and -name "*.py" -and -not -path "*migrations*" -print0 | xargs -0 grep'
 
