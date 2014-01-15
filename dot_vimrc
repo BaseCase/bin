@@ -28,7 +28,7 @@ syntax enable
 " visual customizations
 set t_Co=256
 set background=dark
-colorscheme vividchalk
+colorscheme distinguished
 set cursorline
 hi CursorLine cterm=NONE ctermfg=NONE ctermbg=234
 hi Search guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
