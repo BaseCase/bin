@@ -65,6 +65,7 @@ map <leader>l :set list!<cr>
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 autocmd Filetype markdown setlocal linebreak
 autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
+autocmd Filetype html setlocal shiftwidth=2 tabstop=2
 
 " local configs that aren't saved in the git repo
 source ~/.local_vimrc
