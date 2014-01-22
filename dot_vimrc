@@ -22,7 +22,7 @@ set ignorecase smartcase
 set incsearch
 set shell=/bin/bash\ -i " make shell commands load my bash config
 set showmatch
-set wildignore=*.pyc
+set wildignore=*.pyc,node_modules
 set wildmenu
 syntax enable
 
@@ -66,6 +66,8 @@ autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 autocmd Filetype markdown setlocal linebreak
 autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
 autocmd Filetype html setlocal shiftwidth=2 tabstop=2
+autocmd Filetype css setlocal shiftwidth=2 tabstop=2
+autocmd Filetype javascript setlocal shiftwidth=2 tabstop=2
 
 " local configs that aren't saved in the git repo
 source ~/.local_vimrc
