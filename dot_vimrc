@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'mattn/emmet-vim'
+Bundle 'groenewege/vim-less'
 
 " basic settings
 filetype plugin indent on
