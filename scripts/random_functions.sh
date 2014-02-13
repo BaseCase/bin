@@ -1,9 +1,9 @@
 #!/bin/bash
 
 current_git_branch() {
-    git status |
-    grep "On branch" |
-    cut -d ' ' -f 3
+    git branch |
+    grep "^\*" |
+    cut -d ' ' -f 2
 }
 
 git_merge_current_remote_branch() {
