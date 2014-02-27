@@ -64,6 +64,7 @@ alias json="python -m json.tool"
 alias msp="./manage.py shell_plus"
 alias p="pbcopy"
 alias py="python"
+alias p3m="python3 manage.py"
 alias scr="screen -r"
 alias types="find . -type f -exec basename {} \; | rev | cut -d '.' -f 1 | rev | sort | uniq" # list all filetypes in this and child directories
 alias x="xargs"
