@@ -62,7 +62,7 @@ map <leader>` :set wrap!<cr>
 map <leader>c :%w !pbcopy<CR>
 map <leader>f :CommandT<cr>
 map <leader>l :set list!<cr>
-map <leader>n :e ~/Desktop/scratch_notes.md<cr>
+map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
 
 " type-specific configs
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
