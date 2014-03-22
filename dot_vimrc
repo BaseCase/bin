@@ -66,7 +66,7 @@ map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
 
 " type-specific configs
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-autocmd Filetype markdown setlocal linebreak
+autocmd Filetype markdown,text setlocal nolist linebreak wrap
 autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 
