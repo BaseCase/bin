@@ -46,8 +46,8 @@ set winwidth=80
 autocmd BufWritePre * :%s/\s\+$//e " delete trailing whitespace on save
 set expandtab
 set list listchars=tab:→.
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " custom mappings
 let mapleader=","
@@ -68,9 +68,7 @@ map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 autocmd Filetype markdown setlocal linebreak
 autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
-autocmd Filetype html setlocal shiftwidth=2 tabstop=2
-autocmd Filetype css setlocal shiftwidth=2 tabstop=2
-autocmd Filetype javascript setlocal shiftwidth=2 tabstop=2
+autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 
 " local configs that aren't saved in the git repo
 source ~/.local_vimrc
