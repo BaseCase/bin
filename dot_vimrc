@@ -11,6 +11,7 @@ Bundle 'wincent/Command-T'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'groenewege/vim-less'
+Bundle 'mustache/vim-mustache-handlebars'
 
 " basic settings
 filetype plugin indent on
@@ -27,6 +28,7 @@ set wildignore=*.pyc,node_modules,bower_components
 set wildmenu
 set foldopen-=search
 syntax enable
+let g:mustache_abbreviations = 1
 
 " visual customizations
 set t_Co=256
