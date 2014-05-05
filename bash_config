@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 export PATH="\
 /usr/local/bin:\
 /usr/local/sbin:\
@@ -8,11 +7,11 @@ export PATH="\
 /bin:\
 /usr/sbin:\
 /sbin:\
+~/global_npm/bin:\
 $CJB_BIN/scripts:\
 "
 
 export EDITOR="vim"
-export NODE_PATH="/usr/local/lib/node_modules"
 
 # no .pyc files
 export PYTHONDONTWRITEBYTECODE=1

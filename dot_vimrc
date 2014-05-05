@@ -16,8 +16,8 @@ Bundle 'mustache/vim-mustache-handlebars'
 " basic settings
 filetype plugin indent on
 set backspace=eol,indent,start
-set directory=~/.backup
-set backupdir=~/.backup
+set directory=~/.vim_backup
+set backupdir=~/.vim_backup
 set hidden
 set hlsearch
 set ignorecase smartcase
