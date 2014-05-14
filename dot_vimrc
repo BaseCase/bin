@@ -12,6 +12,7 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'groenewege/vim-less'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'jtratner/vim-flavored-markdown'
 
 " basic settings
 filetype plugin indent on
@@ -69,8 +70,8 @@ map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
 map <leader>/ i</<C-x><C-o><ESC>==
 
 " type-specific configs
-autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-autocmd Filetype markdown,text setlocal nolist linebreak wrap
+autocmd BufNewFile,BufRead *.md setlocal filetype=ghmarkdown
+autocmd Filetype ghmarkdown,text setlocal nolist linebreak wrap
 autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 

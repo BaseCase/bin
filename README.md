@@ -13,9 +13,10 @@ ruby extconf.rb
 make
 ```
 
+
 ## adding a new dotfile
 
-Any file in this folder named "dot\_\*" will be included in the install process.
+Any file in this folder named "dot\_*" will be included in the install process.
 
 ## adding a new util script
 
@@ -23,5 +24,5 @@ Any file in the scripts/ folder is in the path, so just put anything here and ma
 
 ## local bash config
 
-You can put any config stuff you don't want public in the local\_bash\_config file. It's gitignored, so go nuts.
+You can put any config stuff you don't want public in the local_bash_config file. It's gitignored, so go nuts.
 
