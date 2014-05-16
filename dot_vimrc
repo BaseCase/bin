@@ -24,7 +24,6 @@ set hlsearch
 set ignorecase smartcase
 set incsearch
 set shell=/bin/bash\ -i " make shell commands load my bash config
-set showmatch
 set wildignore=*.pyc,node_modules,bower_components
 set wildmenu
 set foldopen-=search
