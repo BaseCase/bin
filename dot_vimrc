@@ -65,6 +65,7 @@ map <leader>c :%w !pbcopy<CR>
 map <leader>f :CommandT<cr>
 map <leader>l :set list!<cr>
 map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
+map <leader>r :e ~/Desktop/ragged_edge.txt<cr>
 " in HTML mode, quickly close a tag:
 map <leader>/ i</<C-x><C-o><ESC>==
 
