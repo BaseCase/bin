@@ -58,6 +58,7 @@ map <DOWN> <C-E>
 map <UP> <C-Y>
 map j gj
 map k gk
+map * *N
 
 " insert directory part of current file's path in minibuffer. stolen from GRB
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
