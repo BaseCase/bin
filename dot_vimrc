@@ -59,6 +59,9 @@ map <UP> <C-Y>
 map j gj
 map k gk
 
+" insert directory part of current file's path in minibuffer. stolen from GRB
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
 map <leader>< :e ~/.local_vimrc<cr>
 map <leader>` :set wrap!<cr>
 map <leader>c :%w !pbcopy<CR>
