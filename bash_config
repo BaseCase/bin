@@ -14,9 +14,6 @@ $CJB_BIN/scripts:\
 
 export EDITOR="vim"
 
-# no .pyc files
-export PYTHONDONTWRITEBYTECODE=1
-
 # lots of history, and append it to histfile instead of overwriting
 export HISTSIZE=100000
 shopt -s histappend
