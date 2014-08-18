@@ -79,6 +79,24 @@ autocmd Filetype ghmarkdown,text setlocal nolist linebreak wrap
 autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 
+"""""""""""""""""""""""
+" test running helpers
+""""""""""""""""""""""""
+map <leader><c-t> :call SetCurrentTest()<cr>
+
+" Python version of test runner stuff
+function! SetCurrentTest()
+    let filename = expand('%')
+    let stripped = substitute(filename, '.py', '', '')
+    let g:CURRENT_TEST = substitute(stripped, '/', '.', 'g')
+    echo "Test is now:"
+    echo g:CURRENT_TEST
+endfunction
+
+" override this with something that includes "<c-r>=expand(g:CURRENT_TEST)<cr>"
+" in your local vim settings
+map <leader>t :!clear ; python -m unittest discover<cr>
+
 " local configs that aren't saved in the git repo
 source ~/.local_vimrc
 
