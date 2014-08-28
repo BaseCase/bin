@@ -2,6 +2,8 @@
 
 set -e
 
+# for every file in ~/bin that starts with "dot_",
+# make a symlinked dotfile in ~ that maps to that file in ~/bin
 for source_file in $(find . -name "dot_*" -maxdepth 1)
 do
     target_file=${source_file/.\/dot_/.}
