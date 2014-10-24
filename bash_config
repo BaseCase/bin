@@ -78,7 +78,7 @@ NO_COLOR='\e[0m'
 YELLOW='\e[1;33m'
 BLUE='\e[1;34m'
 CYAN='\e[1;36m'
-PS1="\n$BLUE\h $CYAN\u $NO_COLOR\w $YELLOW\$(vcprompt)$NO_COLOR \n$ "
+PS1="\n$BLUE\h $CYAN\u $NO_COLOR\w $YELLOW $NO_COLOR \n$ "
 
 
 source $CJB_BIN/scripts/git-completion.bash

@@ -13,6 +13,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'groenewege/vim-less'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'jtratner/vim-flavored-markdown'
+Bundle 'mikewest/vimroom'
 
 " basic settings
 filetype plugin indent on
