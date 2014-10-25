@@ -31,6 +31,8 @@ set wildmenu
 set foldopen-=search
 syntax enable
 let g:mustache_abbreviations = 1
+" disable auto comment insertion on <return>
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " visual customizations
 set t_Co=256
