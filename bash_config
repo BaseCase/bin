@@ -74,11 +74,20 @@ alias x="xargs"
 # Prompt
 #########
 
+number_of_running_jobs() {
+  NUM=`jobs | wc -l | awk '{print $1}'`
+  if [ "$NUM" = "0" ] ; then
+    echo ""
+  else
+    echo "[$NUM]"
+  fi
+}
+
 NO_COLOR='\e[0m'
 YELLOW='\e[1;33m'
 BLUE='\e[1;34m'
 CYAN='\e[1;36m'
-PS1="\n$BLUE\h $CYAN\u $NO_COLOR\w $YELLOW $NO_COLOR \n$ "
+PS1="\n$BLUE\h $CYAN\u $NO_COLOR\w $YELLOW \$(number_of_running_jobs) $NO_COLOR \n$ "
 
 
 source $CJB_BIN/scripts/git-completion.bash
