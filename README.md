@@ -27,8 +27,10 @@ Any file in the scripts/ folder is in the path, so just put anything here and ma
 You can put any config stuff you don't want public in the local_bash_config file. It's gitignored, so go nuts.
 
 
-# TODO
+# Wishlist/TODO
 
 - [ ] the install.sh script seems to kind of be janky right now...might wanna fix that.
-- [ ] prune this; it's a little silly at the moment
+- [ ] prune this whole repo...it's a little bit too much right now
 - [ ] add current git branch to prompt
+- [ ] in Vim, go to last opened position in a file
+- [ ] find a really good plugin for Emacs-style (un)comment-region
