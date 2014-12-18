@@ -34,3 +34,4 @@ You can put any config stuff you don't want public in the local_bash_config file
 - [ ] add current git branch to prompt
 - [ ] in Vim, go to last opened position in a file
 - [ ] find a really good plugin for Emacs-style (un)comment-region
+- [ ] in Vim, C-] should open tag choices list if there is more than one match, else just jump to single tag
