@@ -41,7 +41,6 @@ set background=dark
 colorscheme distinguished
 set cursorline
 hi CursorLine cterm=NONE ctermfg=NONE ctermbg=235
-hi Search guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 set showmode
 set ruler
 set cmdheight=2
