@@ -7,7 +7,7 @@ set -e
 for file in $(find . -name "dot_*" -maxdepth 1)
 do
     source_file=${file##./}                    # strip leading './' from filename
-    target_file=${source_file/.\/dot_/.}       # make .foo version of dot_foo filename
+    target_file=${source_file/dot_/.}          # make .foo version of dot_foo filename
     ln -fs `pwd`/$source_file ~/$target_file   # symlink ~/.foo files to bin/dot_foo files
 done
 
