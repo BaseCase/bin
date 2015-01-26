@@ -6,11 +6,13 @@
 relevant files into your home directory, so you'll only need to rerun it if you
 add a new dotfile.
 
-2. Install Vundle for Vim: `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+2. Edit ~/.bashrc so that `CJB_BIN` points to the right path.
 
-3. Install all the Vundle plugins: in Vim, run `:BundleInstall`
+3. Install Vundle for Vim: `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 
-4. Now compile the Command-T plugin for Vim:
+4. Install all the Vundle plugins: in Vim, run `:BundleInstall`
+
+5. Now compile the Command-T plugin for Vim:
 
 ```bash
 cd ~/.vim/bundle/Command-T/ruby/command-t

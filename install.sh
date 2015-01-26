@@ -11,6 +11,11 @@ do
     ln -fs `pwd`/$source_file ~/$target_file   # symlink ~/.foo files to bin/dot_foo files
 done
 
+# overwrite ~/.bashrc with a copy of dot_bashrc instead of keeping the symlink,
+# so that CJB_BIN can be changed without confusing git.
+rm ~/.bashrc
+cp dot_bashrc ~/.bashrc
+
 touch local_bash_config
 touch ~/.local_vimrc
 rm -rf ~/.vim_backup
