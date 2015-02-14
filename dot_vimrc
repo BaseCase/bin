@@ -37,19 +37,14 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " visual customizations
 set t_Co=256
-set background=dark
-colorscheme distinguished
 set cursorline
-hi CursorLine cterm=NONE ctermfg=NONE ctermbg=235
+hi CursorLine cterm=NONE ctermfg=NONE ctermbg=255
 set showmode
 set ruler
 set cmdheight=2
 set showtabline=2
 set scrolloff=3
 set winwidth=80
-" change cursor when in Normal mode, appears to work only in iTerm2
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " whitespace settings
 autocmd BufWritePre * :%s/\s\+$//e " delete trailing whitespace on save
