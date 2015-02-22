@@ -35,6 +35,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " visual customizations
 set t_Co=256
+set background=light
 set cursorline
 hi CursorLine cterm=NONE ctermfg=NONE ctermbg=255
 set showmode
@@ -80,6 +81,7 @@ autocmd BufNewFile,BufRead *.md setlocal filetype=ghmarkdown
 autocmd Filetype ghmarkdown,text setlocal nolist linebreak wrap
 autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4
+autocmd BufNewFile,BufRead *.us set syntax=jst
 
 """""""""""""""""""""""
 " test running helpers
