@@ -17,7 +17,8 @@ add a new dotfile.
 ```bash
 cd ~/.vim/bundle/Command-T/ruby/command-t
 ruby extconf.rb
-make```
+make
+```
 
 
 ## adding a new dotfile
@@ -39,15 +40,3 @@ file. It's gitignored, so go nuts.
 
 For some reason I don't understand, the install script creates a bonus file
 under bin/dot_vim...dunno what's up with that yet.
-
-
-# Wishlist/TODO
-
-- [X] the install.sh script seems to kind of be janky right now...might wanna
-  fix that.
-- [ ] prune this whole repo...it's a little bit too much right now
-- [ ] add current git branch to prompt
-- [ ] in Vim, go to last opened position in a file
-- [ ] find a really good plugin for Emacs-style (un)comment-region
-- [X] in Vim, C-] should open tag choices list if there is more than one match,
-  else just jump to single tag
