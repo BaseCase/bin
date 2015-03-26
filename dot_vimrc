@@ -29,6 +29,9 @@ let g:CommandTWildIgnore=&wildignore
 set wildmenu
 set foldopen-=search
 set mouse=a
+" don't wrap searches when you hit the bottom or top
+" I don't love this, but until I get a vbell on wrap, it's better
+set nowrapscan
 syntax enable
 let g:mustache_abbreviations = 1
 " disable auto comment insertion on <return>
