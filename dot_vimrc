@@ -67,6 +67,7 @@ map * *N
 map <C-j> 10j
 map <C-k> 10k
 map <C-]> g<C-]>
+map K k
 
 " insert directory part of current file's path in minibuffer. stolen from GRB
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
