@@ -39,7 +39,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " visual customizations
 set t_Co=256
-set background=dark
+set background=light
 set showmode
 set ruler
 set cmdheight=2
@@ -49,9 +49,8 @@ set winwidth=80
 
 " highlight line stuff
 set cursorline
-"" 255 works better for light background, 238 better for dark
-"highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=255
-highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=Black
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=255
+"highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=Black
 
 " whitespace settings
 autocmd BufWritePre * :%s/\s\+$//e " delete trailing whitespace on save
