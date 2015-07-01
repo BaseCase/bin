@@ -39,18 +39,15 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " visual customizations
 set t_Co=256
-set background=light
 set showmode
 set ruler
 set cmdheight=2
 set showtabline=2
 set scrolloff=3
 set winwidth=80
-
-" highlight line stuff
 set cursorline
-highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=255
-"highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=Black
+set background=dark
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
 
 " whitespace settings
 autocmd BufWritePre * :%s/\s\+$//e " delete trailing whitespace on save
@@ -112,3 +109,15 @@ map <leader>t :!clear ; python -m unittest discover<cr>
 " local configs that aren't saved in the git repo
 source ~/.local_vimrc
 
+
+
+
+" a quick vimscript that will show you all colors available to you and their numbers.
+" just copy this, paste it into a buffer, and :so %
+"let num = 255
+"while num >= 0
+"    exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
+"    exec 'syn match col_'.num.' "ctermbg='.num.':...." containedIn=ALL'
+"    call append(0, 'ctermbg='.num.':....')
+"    let num = num - 1
+"endwhile
