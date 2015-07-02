@@ -26,6 +26,7 @@ set incsearch
 set shell=/bin/bash\ -i " make shell commands load my bash config
 set wildignore=*.pyc,*.o,.git,bower_components,node_modules,__pycache__,venv
 let g:CommandTWildIgnore=&wildignore
+let g:CommandTTraverseSCM="pwd"
 set wildmenu
 set foldopen-=search
 set mouse=a
