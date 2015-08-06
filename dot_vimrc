@@ -24,7 +24,7 @@ set hlsearch
 set ignorecase smartcase
 set incsearch
 set shell=/bin/bash\ -i " make shell commands load my bash config
-set wildignore=*.pyc,*.o,.git,bower_components,node_modules,__pycache__,venv,dist
+set wildignore=*.pyc,*.o,.git,bower_components,node_modules,__pycache__,venv,dist,tmp
 let g:CommandTWildIgnore=&wildignore
 let g:CommandTTraverseSCM="pwd"
 set wildmenu
@@ -34,7 +34,6 @@ set mouse=a
 " I don't love this, but until I get a vbell on wrap, it's better
 set nowrapscan
 syntax enable
-let g:mustache_abbreviations = 1
 " disable auto comment insertion on <return>
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
