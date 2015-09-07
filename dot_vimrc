@@ -12,6 +12,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'groenewege/vim-less'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'jtratner/vim-flavored-markdown'
+Bundle 'scrooloose/nerdtree'
 Bundle 'basecase/orgdown'
 
 " basic settings
@@ -80,6 +81,7 @@ map <leader>l :set list!<cr>
 map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
 " in HTML mode, quickly close a tag:
 map <leader>/ i</<C-x><C-o><ESC>==
+map <leader>z :NERDTreeToggle<cr>
 
 " type-specific configs
 autocmd BufNewFile,BufRead *.md setlocal filetype=ghmarkdown
