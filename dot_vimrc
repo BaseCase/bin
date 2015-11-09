@@ -14,6 +14,7 @@ Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'scrooloose/nerdtree'
 Bundle 'basecase/orgdown'
+Bundle 'kchmck/vim-coffee-script'
 
 " basic settings
 filetype plugin indent on
