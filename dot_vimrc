@@ -49,6 +49,10 @@ set scrolloff=3
 set winwidth=80
 set cursorline
 set background=dark
+if has("gui_running")
+  set background=light
+  set guifont=Menlo:h14
+endif
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
 
 " whitespace settings
