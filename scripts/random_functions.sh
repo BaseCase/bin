@@ -1,7 +1,8 @@
 #!/bin/bash
 
 current_git_branch() {
-    git branch |
+    git branch 2>1 |
+    grep -v "fatal" |
     grep "^\*" |
     cut -d ' ' -f 2
 }
