@@ -55,8 +55,10 @@ alias la="l -a"
 alias lal="la | less -R"
 
 # random helpers
+alias be="bundle exec"
 alias die_pyc="find . -name '*.pyc' -delete ; find . -type d -name '__pycache__' -delete"
 alias j="jobs"
+alias ne="\$(npm bin)"
 alias p="pbcopy"
 alias psh="pushd ~"
 alias ql="qlmanage -p" # OSX Finder's "quick look" preview thing
