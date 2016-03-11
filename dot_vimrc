@@ -52,6 +52,7 @@ if has("gui_running")
   set guifont=Menlo:h14
 endif
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
+let g:ctrlp_match_window = 'max:30'
 
 " whitespace settings
 autocmd BufWritePre * :%s/\s\+$//e " delete trailing whitespace on save
