@@ -7,7 +7,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'wincent/Command-T'
 Bundle 'mattn/emmet-vim'
 Bundle 'groenewege/vim-less'
 Bundle 'mustache/vim-mustache-handlebars'
@@ -15,6 +14,7 @@ Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'scrooloose/nerdtree'
 Bundle 'basecase/orgdown'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'ctrlpvim/ctrlp.vim'
 
 " basic settings
 filetype plugin indent on
@@ -27,8 +27,6 @@ set ignorecase smartcase
 set incsearch
 set shell=/bin/bash\ -i " make shell commands load my bash config
 set wildignore=*.pyc,*.o,.git,bower_components,node_modules,__pycache__,venv,dist,tmp
-let g:CommandTWildIgnore=&wildignore
-let g:CommandTTraverseSCM="pwd"
 set wildmenu
 set foldopen-=search
 set mouse=a
@@ -82,7 +80,8 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>< :e ~/.local_vimrc<cr>
 map <leader>` :set wrap!<cr>
 map <leader>c :%w !pbcopy<CR>
-map <leader>f :CommandT<cr>
+map <leader>f :CtrlP<cr>
+map <leader>b :CtrlPBuffer<cr>
 map <leader>l :set list!<cr>
 map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
 " in HTML mode, quickly close a tag:
