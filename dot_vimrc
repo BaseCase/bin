@@ -36,6 +36,7 @@ set nowrapscan
 syntax enable
 " disable auto comment insertion on <return>
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+let g:ctrlp_working_path_mode = 0
 
 " visual customizations
 set t_Co=256
