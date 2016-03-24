@@ -14,3 +14,7 @@
     rbc = rebase --continue
 [github]
     user = basecase
+[http]
+    sslVerify = false
+[credential]
+    helper = osxkeychain
