@@ -69,6 +69,12 @@ alias vi="echo 'pls type all three letters of vim'"
 alias vv=". venv/bin/activate"
 alias x="xargs"
 
+########
+# Misc Setup
+#######
+
+eval "$(rbenv init -)"
+
 
 #########
 # Prompt
