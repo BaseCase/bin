@@ -15,6 +15,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'basecase/orgdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'tpope/vim-commentary'
 
 " basic settings
 filetype plugin indent on
