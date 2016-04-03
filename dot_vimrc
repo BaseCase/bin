@@ -90,6 +90,8 @@ map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
 " in HTML mode, quickly close a tag:
 map <leader>/ i</<C-x><C-o><ESC>==
 map <leader>z :NERDTreeToggle<cr>
+" search for word under point in matching file types and open quickfix with results
+map <leader>w yiw:vimgrep <c-r>" **/*.<c-r>=expand('%:e')<cr><cr>:copen<cr>
 
 " type-specific configs
 autocmd BufNewFile,BufRead *.md setlocal filetype=ghmarkdown
