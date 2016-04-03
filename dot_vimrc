@@ -38,6 +38,7 @@ syntax enable
 " disable auto comment insertion on <return>
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:ctrlp_working_path_mode = 0
+autocmd BufReadPost quickfix set modifiable
 
 " visual customizations
 set t_Co=256
@@ -92,6 +93,8 @@ map <leader>/ i</<C-x><C-o><ESC>==
 map <leader>z :NERDTreeToggle<cr>
 " search for word under point in matching file types and open quickfix with results
 map <leader>w yiw:vimgrep <c-r>" **/*.<c-r>=expand('%:e')<cr><cr>:copen<cr>
+map <leader>j :cnext<cr>
+map <leader>k :cprev<cr>
 
 " type-specific configs
 autocmd BufNewFile,BufRead *.md setlocal filetype=ghmarkdown
