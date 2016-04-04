@@ -17,6 +17,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'godlygeek/tabular'
+Bundle 'slim-template/vim-slim.git'
 
 " basic settings
 filetype plugin indent on
