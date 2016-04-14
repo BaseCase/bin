@@ -18,6 +18,7 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'godlygeek/tabular'
 Bundle 'slim-template/vim-slim.git'
+Bundle 'tpope/vim-fugitive'
 
 " basic settings
 filetype plugin indent on
