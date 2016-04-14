@@ -105,6 +105,7 @@ autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 autocmd Filetype c setlocal shiftwidth=4 tabstop=4
 autocmd BufNewFile,BufRead *.us set syntax=jst
 autocmd Filetype eruby setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd Filetype ruby setlocal regexpengine=1
 
 """""""""""""""""""""""
 " test running helpers
