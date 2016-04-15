@@ -5,26 +5,25 @@ autocmd!
 ""
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'mattn/emmet-vim'
-Bundle 'groenewege/vim-less'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'jtratner/vim-flavored-markdown'
-Bundle 'scrooloose/nerdtree'
-Bundle 'basecase/orgdown'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'tpope/vim-commentary'
-Bundle 'godlygeek/tabular'
-Bundle 'slim-template/vim-slim.git'
-Bundle 'tpope/vim-fugitive'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'basecase/orgdown'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'scrooloose/nerdtree'
+Plugin 'slim-template/vim-slim.git'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()
+filetype plugin indent on
 
 ""
 " basic settings
 ""
-filetype plugin indent on
 syntax enable
 set backspace=eol,indent,start
 set backupdir=~/.vim_backup
@@ -92,13 +91,11 @@ map <leader>w yiw:vimgrep <c-r>" **/*.<c-r>=expand('%:e')<cr><cr>:copen<cr>
 ""
 " filetype-specific configs
 ""
-autocmd BufNewFile,BufRead *.md setlocal filetype=ghmarkdown
-autocmd BufNewFile,BufRead *.us set syntax=jst
-autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
+autocmd BufNewFile,BufRead *.md setlocal filetype=orgdown
 autocmd BufReadPost quickfix set modifiable
 autocmd Filetype c setlocal shiftwidth=4 tabstop=4
 autocmd Filetype eruby setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd Filetype ghmarkdown,text setlocal nolist linebreak wrap
+autocmd Filetype orgdown,text setlocal nolist linebreak wrap
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 autocmd Filetype ruby setlocal regexpengine=1 nocursorline
 
