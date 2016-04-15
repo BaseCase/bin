@@ -1,11 +1,12 @@
 autocmd!
 
+""
 " Vundle stuff
+""
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
 Bundle 'gmarik/vundle'
 Bundle 'mattn/emmet-vim'
 Bundle 'groenewege/vim-less'
@@ -20,56 +21,56 @@ Bundle 'godlygeek/tabular'
 Bundle 'slim-template/vim-slim.git'
 Bundle 'tpope/vim-fugitive'
 
+""
 " basic settings
+""
 filetype plugin indent on
+syntax enable
 set backspace=eol,indent,start
-set directory=~/.vim_backup
 set backupdir=~/.vim_backup
+set directory=~/.vim_backup
+set foldopen-=search "search won't open closed folds on you
 set hidden
 set hlsearch
 set ignorecase smartcase
 set incsearch
-set shell=/bin/bash\ -i " make shell commands load my bash config
+set mouse=a
+set nowrapscan "search doesn't wrap at top or bottom of file
+set shell=/bin/bash\ -i "make shell commands load my bash config
 set wildignore=*.pyc,*.o,.git,bower_components,node_modules,__pycache__,venv,dist,tmp
 set wildmenu
-set foldopen-=search
-set mouse=a
-" don't wrap searches when you hit the bottom or top
-" I don't love this, but until I get a vbell on wrap, it's better
-set nowrapscan
-syntax enable
-" disable auto comment insertion on <return>
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-let g:ctrlp_working_path_mode = 0
-autocmd BufReadPost quickfix set modifiable
 
+""
 " visual customizations
-set t_Co=256
-set showmode
-set ruler
-set cmdheight=2
-set showtabline=2
-set scrolloff=3
-set winwidth=80
-set cursorline
+""
 set background=dark
+set cmdheight=2
+set cursorline
+set scrolloff=3
+set showtabline=2
+set t_Co=256
+set winwidth=80
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
 if has("gui_running")
   set background=light
   set guifont=Menlo:h14
 endif
-highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
-let g:ctrlp_match_window = 'max:30'
 
+""
 " whitespace settings
+""
 autocmd BufWritePre * :%s/\s\+$//e " delete trailing whitespace on save
 set expandtab
 set list listchars=tab:→.
 set shiftwidth=2
 set tabstop=2
 
+""
 " custom mappings
+""
 let mapleader=","
 command! Q q
+command! W w
 map j gj
 map k gk
 map * *N
@@ -79,64 +80,38 @@ map <C-]> g<C-]>
 map K k
 imap <C-d> <C-o>x
 
-" insert directory part of current file's path in minibuffer. stolen from GRB
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
-
-map <leader>< :e ~/.local_vimrc<cr>
 map <leader>` :set wrap!<cr>
 map <leader>c :%w !pbcopy<CR>
-map <leader>f :CtrlP<cr>
-map <leader>b :CtrlPBuffer<cr>
-map <leader>l :set list!<cr>
-map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
-" in HTML mode, quickly close a tag:
-map <leader>/ i</<C-x><C-o><ESC>==
-map <leader>z :NERDTreeToggle<cr>
-" search for word under point in matching file types and open quickfix with results
-map <leader>w yiw:vimgrep <c-r>" **/*.<c-r>=expand('%:e')<cr><cr>:copen<cr>
 map <leader>j :cnext<cr>
 map <leader>k :cprev<cr>
+map <leader>l :set list!<cr>
+map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
+" search for word under point in matching file types and open quickfix with results
+map <leader>w yiw:vimgrep <c-r>" **/*.<c-r>=expand('%:e')<cr><cr>:copen<cr>
 
-" type-specific configs
+""
+" filetype-specific configs
+""
 autocmd BufNewFile,BufRead *.md setlocal filetype=ghmarkdown
-autocmd Filetype ghmarkdown,text setlocal nolist linebreak wrap
-autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
-autocmd Filetype python setlocal shiftwidth=4 tabstop=4
-autocmd Filetype c setlocal shiftwidth=4 tabstop=4
 autocmd BufNewFile,BufRead *.us set syntax=jst
+autocmd BufNewFile,BufRead local_bash_config setlocal filetype=sh
+autocmd BufReadPost quickfix set modifiable
+autocmd Filetype c setlocal shiftwidth=4 tabstop=4
 autocmd Filetype eruby setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd Filetype ruby setlocal regexpengine=1
+autocmd Filetype ghmarkdown,text setlocal nolist linebreak wrap
+autocmd Filetype python setlocal shiftwidth=4 tabstop=4
+autocmd Filetype ruby setlocal regexpengine=1 nocursorline
 
-"""""""""""""""""""""""
-" test running helpers
-""""""""""""""""""""""""
-map <leader><c-t> :call SetCurrentTest()<cr>
+""
+" plugin-related settings
+""
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_match_window = 'max:30'
+map <leader>b :CtrlPBuffer<cr>
+map <leader>f :CtrlP<cr>
+map <leader>z :NERDTreeToggle<cr>
 
-" Python version of test runner stuff
-function! SetCurrentTest()
-    let filename = expand('%')
-    let stripped = substitute(filename, '.py', '', '')
-    let g:CURRENT_TEST = substitute(stripped, '/', '.', 'g')
-    echo "Test is now:"
-    echo g:CURRENT_TEST
-endfunction
-
-" override this with something that includes "<c-r>=expand(g:CURRENT_TEST)<cr>"
-" in your local vim settings
-map <leader>t :!clear ; python -m unittest discover<cr>
-
-" local configs that aren't saved in the git repo
+""
+" load untracked local settings
+""
 source ~/.local_vimrc
-
-
-
-
-" a quick vimscript that will show you all colors available to you and their numbers.
-" just copy this, paste it into a buffer, and :so %
-"let num = 255
-"while num >= 0
-"    exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'
-"    exec 'syn match col_'.num.' "ctermbg='.num.':...." containedIn=ALL'
-"    call append(0, 'ctermbg='.num.':....')
-"    let num = num - 1
-"endwhile
