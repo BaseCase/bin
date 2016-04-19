@@ -6,9 +6,9 @@ add a new dotfile.
 
 2. Edit ~/.bashrc so that `CJB_BIN` points to the right path.
 
-3. Install Vundle for Vim: `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+3. Install Vundle for Vim: `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
-4. Install all the Vundle plugins: in Vim, run `:BundleInstall`
+4. Install all the Vundle plugins: in Vim, run `:PluginInstall`
 
 ## adding a new dotfile
 Any file in this folder named "dot\_*" will be included in the install process.
