@@ -108,6 +108,11 @@ let g:ctrlp_match_window = 'max:30'
 map <leader>b :CtrlPBuffer<cr>
 map <leader>f :CtrlP<cr>
 map <leader>z :NERDTreeToggle<cr>
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtSelectMove("j")': ['<c-j>', '<down>', '<c-n>'],
+  \ 'PrtSelectMove("k")': ['<c-k>', '<up>', '<c-p>'],
+  \ 'PrtHistory(-1)':       [''],
+  \ 'PrtHistory(1)':        [''] }
 
 ""
 " load untracked local settings
