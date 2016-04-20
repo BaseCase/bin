@@ -27,10 +27,3 @@ toggle_hidden_files_in_finder() {
     fi
     killall Finder
 }
-
-retag() {
-    cd `git rev-parse --show-toplevel`
-    ctags -R --python-kinds=-i
-    cd -
-}
-
