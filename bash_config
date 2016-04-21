@@ -52,9 +52,9 @@ git_fetch_remote() {
 git_open_remote_in_browser() {
   open $(
     git remote get-url `git_remote_name` |
-    sed s',:,/,' |
+    sed 's,:,/,' |
     sed 's,^git@,https://,' |
-    sed s',\.git$,,'
+    sed 's,\.git$,,'
   )
 }
 
