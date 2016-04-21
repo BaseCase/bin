@@ -49,6 +49,15 @@ git_fetch_remote() {
   git fetch $(git_remote_name)
 }
 
+git_open_remote_in_browser() {
+  open $(
+    git remote get-url `git_remote_name` |
+    sed s',:,/,' |
+    sed 's,^git@,https://,' |
+    sed s',\.git$,,'
+  )
+}
+
 forward_port() {
   if [ -z "$1" ]; then
     echo "Usage: forward_port <USERNAME> <HOSTNAME> <PORT>"
@@ -77,7 +86,7 @@ alias gfg="git_fetch_remote"
 alias gitc="git diff --cached"
 
 # open this project on github
-alias gho="github_open.sh"
+alias gho="git_open_remote_in_browser"
 
 # merge github version of this branch with local
 alias gm="git_merge_current_remote_branch"
