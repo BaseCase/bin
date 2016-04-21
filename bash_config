@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#############
+# MISC SETUP
+#############
+
 export PATH="\
 /usr/local/bin:\
 /usr/local/sbin:\
@@ -21,12 +25,16 @@ shopt -s histappend
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
+eval "$(rbenv init -)"
+
+
 ###################
 # RANDOM FUNCTIONS
 ###################
 
 git_current_branch() {
-  git rev-parse --abbrev-ref HEAD
+  git rev-parse --abbrev-ref HEAD 2>&1 |
+  grep -v "^fatal"
 }
 
 git_remote_name() {
@@ -57,6 +65,7 @@ toggle_hidden_files_in_finder() {
   fi
   killall Finder
 }
+
 
 ##########
 # ALIASES
@@ -108,14 +117,9 @@ alias vim="mvim -v"
 alias vv=". venv/bin/activate"
 alias x="xargs"
 
-#############
-# Misc Setup
-#############
-
-eval "$(rbenv init -)"
 
 #########
-# Prompt
+# PROMPT
 #########
 
 number_of_running_jobs() {
@@ -141,6 +145,10 @@ BLUE='\e[1;34m'
 CYAN='\e[1;36m'
 PS1="\n\$(now) $YELLOW\$(warn_if_i_have_uncleared_scratch_notes)$BLUE\h $CYAN\u $NO_COLOR\w $YELLOW \$(git_current_branch) $BLUE \$(number_of_running_jobs) $NO_COLOR \n$ "
 
+
+#################
+# OTHER INCLUDES
+#################
 
 source $CJB_BIN/scripts/git-completion.bash
 source $CJB_BIN/local_bash_config
