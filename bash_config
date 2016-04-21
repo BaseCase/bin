@@ -21,13 +21,50 @@ shopt -s histappend
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
+###################
+# RANDOM FUNCTIONS
+###################
+
+git_current_branch() {
+  git rev-parse --abbrev-ref HEAD
+}
+
+git_remote_name() {
+  git remote | head -n 1
+}
+
+git_merge_current_remote_branch() {
+  git merge $(git_remote_name)/$(git_current_branch)
+}
+
+git_fetch_remote() {
+  git fetch $(git_remote_name)
+}
+
+forward_port() {
+  if [ -z "$1" ]; then
+    echo "Usage: forward_port <USERNAME> <HOSTNAME> <PORT>"
+  else
+    ssh $1@$2 -L $3:$2:$3 -N
+  fi
+}
+
+toggle_hidden_files_in_finder() {
+  if [ `defaults read com.apple.finder AppleShowAllFiles` == "TRUE" ]; then
+    defaults write com.apple.finder AppleShowAllFiles FALSE
+  else
+    defaults write com.apple.finder AppleShowAllFiles TRUE
+  fi
+  killall Finder
+}
+
 ##########
 # ALIASES
 ##########
 
 # git aliases
 alias g="git status"
-alias gfg="git fetch github"
+alias gfg="git_fetch_remote"
 alias gitc="git diff --cached"
 
 # open this project on github
@@ -71,12 +108,11 @@ alias vim="mvim -v"
 alias vv=". venv/bin/activate"
 alias x="xargs"
 
-########
+#############
 # Misc Setup
-#######
+#############
 
 eval "$(rbenv init -)"
-
 
 #########
 # Prompt
@@ -103,9 +139,8 @@ NO_COLOR='\e[0m'
 YELLOW='\e[1;33m'
 BLUE='\e[1;34m'
 CYAN='\e[1;36m'
-PS1="\n\$(now) $YELLOW\$(warn_if_i_have_uncleared_scratch_notes)$BLUE\h $CYAN\u $NO_COLOR\w $YELLOW \$(current_git_branch) $BLUE \$(number_of_running_jobs) $NO_COLOR \n$ "
+PS1="\n\$(now) $YELLOW\$(warn_if_i_have_uncleared_scratch_notes)$BLUE\h $CYAN\u $NO_COLOR\w $YELLOW \$(git_current_branch) $BLUE \$(number_of_running_jobs) $NO_COLOR \n$ "
 
 
 source $CJB_BIN/scripts/git-completion.bash
-source $CJB_BIN/scripts/random_functions.sh
 source $CJB_BIN/local_bash_config
