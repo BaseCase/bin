@@ -83,17 +83,9 @@ toggle_hidden_files_in_finder() {
 # git aliases
 alias g="git status"
 alias gfg="git_fetch_remote"
-alias gitc="git diff --cached"
-
-# open this project on github
 alias gho="git_open_remote_in_browser"
-
-# merge github version of this branch with local
 alias gm="git_merge_current_remote_branch"
-
-# spelling is hard
-alias gtci="gitc"
-alias gtic="gitc"
+alias gitc="git diff --cached"
 
 # grep stuff
 alias grep="grep --color=auto -E --exclude=tags"
