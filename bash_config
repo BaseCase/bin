@@ -106,7 +106,7 @@ alias be="bundle exec"
 alias die_pyc="find . -name '*.pyc' -delete ; find . -type d -name '__pycache__' -delete"
 alias j="jobs"
 alias json="pbpaste | python -m json.tool"
-alias ne="\$(npm bin)"
+alias ne='PATH=$(npm bin):$PATH'
 alias p="pbcopy"
 alias psh="pushd ~"
 alias ql="qlmanage -p" # OSX Finder's "quick look" preview thing
