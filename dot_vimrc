@@ -49,14 +49,17 @@ set scrolloff=3
 set showtabline=2
 set t_Co=256
 set winwidth=80
+" dark vs light stuff:
+set background=dark
+set cursorline
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=0
+
+""
+" GUI mode (MacVim) setup
+""
 if has("gui_running")
   set background=light
-  set guifont=Menlo:h14
 endif
-" dark vs light stuff:
-set background=light
-"set cursorline
-"highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=15
 
 ""
 " whitespace settings
