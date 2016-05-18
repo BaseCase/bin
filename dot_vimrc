@@ -34,6 +34,7 @@ set hidden
 set hlsearch
 set ignorecase smartcase
 set incsearch
+set lazyredraw
 set mouse=a
 set nowrapscan "search doesn't wrap at top or bottom of file
 set shell=/bin/bash\ -i "make shell commands load my bash config
