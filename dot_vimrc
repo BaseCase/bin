@@ -51,9 +51,9 @@ set showtabline=2
 set t_Co=256
 set winwidth=80
 " dark vs light stuff:
-set background=light
-"set cursorline
-"highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=0
+set background=dark
+set cursorline
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=0
 
 if has("gui_running")
   set background=dark
