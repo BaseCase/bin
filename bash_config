@@ -75,6 +75,11 @@ toggle_hidden_files_in_finder() {
   killall Finder
 }
 
+prettyman() {
+  manpage=$1
+  man $manpage | fold -w 100 | less
+}
+
 
 ##########
 # ALIASES
@@ -106,6 +111,7 @@ alias be="bundle exec"
 alias die_pyc="find . -name '*.pyc' -delete ; find . -type d -name '__pycache__' -delete"
 alias j="jobs"
 alias json="pbpaste | python -m json.tool"
+alias man="prettyman"
 alias ne='PATH=$(npm bin):$PATH'
 alias p="pbcopy"
 alias psh="pushd ~"
