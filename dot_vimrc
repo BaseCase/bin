@@ -60,7 +60,7 @@ set cursorline
 
 " dark mode:
 set background=dark
-highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=0
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
 
 if has("gui_running")
   set background=dark
