@@ -107,6 +107,21 @@ map <leader>w yiw:vimgrep <c-r>" **/*.<c-r>=expand('%:e')<cr><cr>:copen<cr>
 map <leader>x :%!xxd<cr>
 
 ""
+" tab completion: on blank line, <tab> indents, else do completion (stolen from grb)
+""
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-n>"
+  endif
+endfunction
+inoremap <expr> <tab> InsertTabWrapper()
+inoremap <s-tab> <c-p>
+
+
+""
 " filetype-specific configs
 ""
 autocmd BufNewFile,BufRead *.md setlocal filetype=orgdown
