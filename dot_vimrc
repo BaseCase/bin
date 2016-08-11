@@ -61,6 +61,7 @@ set cursorline
 " dark mode:
 set background=dark
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
+hi VertSplit ctermbg=8 ctermfg=16
 
 if has("gui_running")
   set background=dark
