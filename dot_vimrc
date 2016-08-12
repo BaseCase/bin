@@ -38,6 +38,7 @@ set incsearch
 set lazyredraw
 set mouse=a
 set nowrapscan "search doesn't wrap at top or bottom of file
+set number
 set re=1
 set shell=/bin/bash\ -i "make shell commands load my bash config
 set wildignore=*.pyc,*.o,.git,bower_components,node_modules,__pycache__,venv,dist,tmp
