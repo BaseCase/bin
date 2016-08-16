@@ -96,8 +96,9 @@ alias gitc="git diff --cached"
 alias grep="grep --color=auto -E --exclude=tags"
 alias jsgrep='find . -type f -and \( -name "*.coffee" -or -name "*.js" -or -name "*.hbs" \) -and -not \( -path "*node_modules*" -or -path "*bower_components*" -or -path "*tmp*" -or -path "*dist*" \) -print0 | xargs -0 grep'
 alias pygrep='find . -type f -and -name "*.py" -and -not -path "*migrations*" -print0 | xargs -0 grep'
-alias htmlgrep='find . -type f -and -name "*.html" -print0 | xargs -0 grep'
+alias htmlgrep='find . -type f -and -name "*.html*" -print0 | xargs -0 grep'
 alias cgrep='find . -type f -and -name "*.c" -or -name "*.h" -print0 | xargs -0 grep'
+alias rbgrep='find . -type f -and -name "*.rb" -print0 | xargs -0 grep'
 
 # ls better
 alias ls="ls -FGC"
