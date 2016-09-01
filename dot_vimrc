@@ -67,7 +67,7 @@ hi LineNr ctermbg=236 ctermfg=246
 if has("gui_running")
   set background=dark
   set guifont=Source\ Code\ Pro:h14
-  colorscheme vividchalk
+  colorscheme predawn
   set cursorline
   set showtabline=1
   set guicursor+=a:blinkon0
