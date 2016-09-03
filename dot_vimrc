@@ -55,12 +55,13 @@ set winwidth=80
 set cursorline
 set background=dark
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
+highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=235
 hi VertSplit ctermbg=8 ctermfg=16
 
 if has("gui_running")
   set background=dark
   colorscheme predawn
-  set guifont=Source\ Code\ Pro:h14
+  set guifont=Inconsolata:h16
   set showtabline=1
   set guicursor+=a:blinkon0
 endif
