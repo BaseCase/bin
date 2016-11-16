@@ -37,7 +37,7 @@ show_message() {
 
 delete_remote_branch() {
   if $SAFETY_ON ; then
-    echo
+    :
   else
     git push "$(git_remote_name)" :$branch
   fi
