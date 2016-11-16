@@ -14,6 +14,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'godlygeek/tabular'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'tpope/vim-commentary'
@@ -96,10 +97,17 @@ map <leader>j :cnext<cr>
 map <leader>k :cprev<cr>
 map <leader>l :set list!<cr>
 map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
-" search for word under point in matching file types and open quickfix with results
-map <leader>w yiw:vimgrep <c-r>" **/*.<c-r>=expand('%:e')<cr><cr>:copen<cr>
 " convert binary file to a hexdump
 map <leader>x :%!xxd<cr>
+
+""
+" Searching
+""
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+" search for word under point in matching file types and open quickfix with results
+map <leader>w yiw:vimgrep <c-r>" **/*.<c-r>=expand('%:e')<cr><cr>:copen<cr>
 
 ""
 " tab completion: on blank line, <tab> indents, else do completion (stolen from grb)
