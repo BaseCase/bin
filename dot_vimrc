@@ -61,7 +61,7 @@ hi VertSplit ctermbg=8 ctermfg=16
 
 if has("gui_running")
   set background=dark
-  colorscheme predawn
+  colorscheme vividchalk
   set guifont=Inconsolata:h16
   set showtabline=1
   set guicursor+=a:blinkon0
