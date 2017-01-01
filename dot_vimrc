@@ -36,10 +36,10 @@ set hidden
 set hlsearch
 set ignorecase smartcase
 set incsearch
-set lazyredraw
+"set lazyredraw "uncomment this line if performance seems bad
 set mouse=a
 set nowrapscan "search doesn't wrap at top or bottom of file
-set re=1
+"set re=1 "uncomment this line if performance seems bad
 set shell=/bin/bash\ -i "make shell commands load my bash config
 set wildignore=*.pyc,*.o,.git,bower_components,node_modules,__pycache__,venv,dist,tmp
 set wildmenu
