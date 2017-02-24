@@ -15,6 +15,8 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'godlygeek/tabular'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mileszs/ack.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'tpope/vim-commentary'
@@ -125,6 +127,12 @@ endfunction
 inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-p>
 
+""
+" Convenient Abbreviations
+""
+
+" render function for a React.js component
+abbreviate rrr render() {<CR>return (<CR>)<CR>}
 
 ""
 " filetype-specific configs
@@ -142,6 +150,8 @@ command! Marked execute "!open " . expand('%:p') . " -a /Applications/Marked\\ 2
 ""
 " plugin-related settings
 ""
+
+" for Ctrl-P
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window = 'max:30'
 map <leader>b :CtrlPBuffer<cr>
@@ -152,6 +162,9 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtSelectMove("k")': ['<c-k>', '<up>', '<c-p>'],
   \ 'PrtHistory(-1)':       [''],
   \ 'PrtHistory(1)':        [''] }
+
+" for vim-jsx
+let g:jsx_ext_required = 0
 
 ""
 " load untracked local settings
