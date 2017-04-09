@@ -3,3 +3,4 @@ local_bash_config
 .netrwhist
 tags
 dot_vim/bundle/
+bin/

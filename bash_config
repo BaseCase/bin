@@ -13,6 +13,7 @@ export PATH="\
 /sbin:\
 ~/global_npm/bin:\
 $CJB_BIN/scripts:\
+$CJB_BIN/bin:\
 "
 
 export EDITOR="mvim -v"
