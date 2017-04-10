@@ -18,3 +18,5 @@
     sslVerify = false
 [credential]
     helper = osxkeychain
+[rerere]
+	enabled = true
