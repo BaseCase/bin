@@ -91,7 +91,7 @@ alias g="git status"
 alias gfg="git_fetch_remote"
 alias gho="git_open_remote_in_browser"
 alias gm="git_merge_current_remote_branch"
-alias gitc="git diff --cached"
+alias gitc="hr && git diff --cached"
 
 # grep stuff
 alias grep="grep --color=auto -E --exclude=tags"
