@@ -139,7 +139,7 @@ number_of_running_jobs() {
 }
 
 warn_if_i_have_uncleared_scratch_notes() {
-  if [ -s ~/Dropbox/scratch_notes.md ] ; then
+  if [ -s ~/Dropbox/notes/scratch_notes.md ] ; then
     echo "!!"
   fi
 }

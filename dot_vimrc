@@ -99,7 +99,7 @@ map <leader>c :%w !pbcopy<CR>
 map <leader>j :cnext<cr>
 map <leader>k :cprev<cr>
 map <leader>l :set list!<cr>
-map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
+map <leader>n :e ~/Dropbox/notes/scratch_notes.md<cr>
 " convert binary file to a hexdump
 map <leader>x :%!xxd<cr>
 "close current buffer without closing that split
