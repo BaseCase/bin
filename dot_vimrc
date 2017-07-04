@@ -9,20 +9,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'basecase/orgdown'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'godlygeek/tabular'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
-Plugin 'slim-template/vim-slim.git'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 filetype plugin indent on
@@ -39,10 +36,9 @@ set hidden
 set hlsearch
 set ignorecase smartcase
 set incsearch
-"set lazyredraw "uncomment this line if performance seems bad
+set lazyredraw "uncomment this line if performance seems bad
 set mouse=a
 set nowrapscan "search doesn't wrap at top or bottom of file
-set re=1
 set shell=/bin/bash\ -i "make shell commands load my bash config
 set wildignore=*.pyc,*.o,.git,bower_components,node_modules,__pycache__,venv,dist,tmp
 set wildmenu
@@ -56,19 +52,10 @@ set scrolloff=3
 set showtabline=2
 set t_Co=256
 set winwidth=80
-set cursorline
 set background=dark
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
 highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=235
 hi VertSplit ctermbg=8 ctermfg=16
-
-if has("gui_running")
-  set background=dark
-  colorscheme vividchalk
-  set guifont=Inconsolata:h16
-  set showtabline=1
-  set guicursor+=a:blinkon0
-endif
 
 ""
 " whitespace settings
@@ -138,7 +125,6 @@ abbreviate rrr render() {<CR>return (<CR>)<CR>}
 ""
 " filetype-specific configs
 ""
-autocmd BufNewFile,BufRead *.md setlocal filetype=orgdown
 autocmd BufReadPost quickfix set modifiable
 autocmd Filetype c,cpp setlocal shiftwidth=4 tabstop=4
 autocmd Filetype eruby setlocal shiftwidth=2 tabstop=2 expandtab
