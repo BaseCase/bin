@@ -36,7 +36,7 @@ set hidden
 set hlsearch
 set ignorecase smartcase
 set incsearch
-set lazyredraw "uncomment this line if performance seems bad
+" set lazyredraw "uncomment this line if performance seems bad
 set mouse=a
 set nowrapscan "search doesn't wrap at top or bottom of file
 set shell=/bin/bash\ -i "make shell commands load my bash config
@@ -62,7 +62,7 @@ hi VertSplit ctermbg=8 ctermfg=16
 ""
 autocmd BufWritePre * :%s/\s\+$//e " delete trailing whitespace on save
 set expandtab
-set list listchars=tab:→.
+set listchars=tab:→.
 set shiftwidth=2
 set tabstop=2
 

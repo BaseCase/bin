@@ -16,7 +16,7 @@ $CJB_BIN/scripts:\
 $CJB_BIN/bin:\
 "
 
-export EDITOR="mvim -v"
+export EDITOR="vim"
 
 # lots of history, and append it to histfile instead of overwriting
 export HISTSIZE=100000
@@ -121,8 +121,7 @@ alias ql="qlmanage -p" # OSX Finder's "quick look" preview thing
 alias scr="screen -r"
 alias tmux="tmux attach || tmux"
 alias types="find . -type f -exec basename {} \; | rev | cut -d '.' -f 1 | rev | sort | uniq" # list all filetypes in this and child directories
-alias vi="mvim -v"
-alias vim="mvim -v"
+alias vi="vim"
 alias vv=". venv/bin/activate"
 alias x="xargs"
 
