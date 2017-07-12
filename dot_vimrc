@@ -90,8 +90,10 @@ map <leader>k :cprev<cr>
 map <leader>l :set list!<cr>
 map <leader>m :w<cr>
 map <leader>n :e ~/Dropbox/notes/scratch_notes.md<cr>
-map <leader>x :%!xxd<cr> " convert binary file to a hexdump
-map <leader>q :bp \| bd #<cr> "close current buffer without closing that split
+" convert binary file to a hexdump
+map <leader>x :%!xxd<cr>
+" close current buffer without closing that split
+map <leader>q :bp \| bd #<cr>
 
 ""
 " Searching
