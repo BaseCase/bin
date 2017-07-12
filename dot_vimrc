@@ -41,7 +41,7 @@ set incsearch
 set mouse=a
 set nowrapscan "search doesn't wrap at top or bottom of file
 set shell=/bin/bash\ -i "make shell commands load my bash config
-set wildignore=*.pyc,*.o,.git,bower_components,node_modules,__pycache__,venv,dist,tmp
+set wildignore=*.pyc,*.o,.git,bower_components,node_modules,__pycache__,venv,dist,tmp,tags
 set wildmenu
 
 ""
