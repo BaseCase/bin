@@ -74,8 +74,6 @@ set tabstop=2
 let mapleader=","
 command! Q q
 command! W w
-map j gj
-map k gk
 map * *N
 map <C-j> 10j
 map <C-k> 10k
