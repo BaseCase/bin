@@ -28,22 +28,6 @@
   (font . "Source Code Pro-14")))
 
 (tool-bar-mode -1)
-(setq inhibit-splash-screen t)
-(global-hl-line-mode t)
-(set-face-background hl-line-face "#ddddee")
-(add-to-list 'default-frame-alist '(background-color . "#dddddd"))
-
-
-;;
-;; term stuff
-;;
-(defun switch-to-term ()
-  (interactive)
-  (term "/bin/bash"))
-(global-set-key (kbd "C-z") 'switch-to-term)
-(add-hook 'term-mode-hook
-  '(lambda ()
-     (term-set-escape-char ?\C-x)))
 
 
 ;;
