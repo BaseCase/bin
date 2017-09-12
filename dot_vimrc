@@ -54,10 +54,22 @@ set showtabline=2
 set t_Co=256
 set winwidth=80
 set background=dark
+set cursorline
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
 highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=235
 highlight LineNr ctermfg=darkgrey
 hi VertSplit ctermbg=8 ctermfg=16
+
+if has("gui_running")
+  set background=light
+  colorscheme paramount
+  set guifont=InputMono:h14
+  set showtabline=1
+  set guicursor+=a:blinkon0
+  set guioptions-=L
+  set number
+endif
+
 
 ""
 " whitespace settings
