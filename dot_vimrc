@@ -37,17 +37,19 @@ set wildmenu
 ""
 " visual customizations
 ""
+set t_Co=256
 set cmdheight=2
 set ruler
 set scrolloff=3
 set showtabline=2
 set winwidth=80
-set background=dark
+set background=light
 set cursorline
-highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=235
-highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=235
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=254
+highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=254
+highlight TabLineFill cterm=NONE ctermfg=NONE ctermbg=254
 highlight LineNr ctermfg=darkgrey
-hi VertSplit ctermbg=8 ctermfg=16
+hi VertSplit ctermbg=253 ctermfg=253
 
 
 ""
