@@ -38,16 +38,13 @@ set wildmenu
 " visual customizations
 ""
 set t_Co=256
+colorscheme paramount
 set cmdheight=2
 set ruler
 set scrolloff=3
 set showtabline=2
 set winwidth=80
 set background=light
-set cursorline
-highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=254
-highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=254
-highlight TabLineFill cterm=NONE ctermfg=NONE ctermbg=254
 highlight LineNr ctermfg=darkgrey
 hi VertSplit ctermbg=253 ctermfg=253
 
@@ -135,6 +132,7 @@ let g:jsx_ext_required = 0
 if has("gui_running")
   set background=light
   colorscheme paramount
+  set cursorline
   set guifont=InputMono:h14
   set showtabline=1
   set guicursor+=a:blinkon0
