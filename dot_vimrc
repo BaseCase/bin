@@ -1,34 +1,27 @@
 autocmd!
 
 ""
-" Vundle stuff
+" Plug stuff
 ""
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'lambdatoast/elm.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-
-call vundle#end()
-filetype plugin indent on
+call plug#begin('~/.vim/bundle')
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'elixir-lang/vim-elixir'
+  Plug 'kchmck/vim-coffee-script'
+  Plug 'lambdatoast/elm.vim'
+  Plug 'mileszs/ack.vim'
+  Plug 'mxw/vim-jsx'
+  Plug 'pangloss/vim-javascript'
+  Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-surround'
+call plug#end()
 
 ""
 " basic settings
 ""
-syntax enable
+set nocompatible
 set backspace=eol,indent,start
 set backupdir=~/.vim_backup
 set directory=~/.vim_backup
@@ -141,7 +134,7 @@ abbreviate rrr render() {<CR>return (<CR>)<CR>}
 autocmd BufReadPost quickfix set modifiable
 autocmd Filetype c,cpp setlocal shiftwidth=4 tabstop=4
 autocmd Filetype eruby setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd Filetype orgdown,text setlocal nolist linebreak wrap
+autocmd Filetype markdown,orgdown,text setlocal nolist linebreak wrap nonumber
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 
 " Open current file in Marked 2 app
