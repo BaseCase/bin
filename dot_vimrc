@@ -5,13 +5,9 @@ autocmd!
 ""
 call plug#begin('~/.vim/bundle')
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'elixir-lang/vim-elixir'
-  Plug 'kchmck/vim-coffee-script'
-  Plug 'lambdatoast/elm.vim'
   Plug 'mileszs/ack.vim'
-  Plug 'mxw/vim-jsx'
-  Plug 'pangloss/vim-javascript'
   Plug 'scrooloose/nerdtree'
+  Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
