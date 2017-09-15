@@ -124,10 +124,17 @@ command! Marked execute "!open " . expand('%:p') . " -a /Applications/Marked\\ 2
 " plugin-related settings
 ""
 map <leader>z :NERDTreeToggle<cr>
-map <leader>f :FZF<cr>
-map <leader>b :Buffers<cr>
 let g:jsx_ext_required = 0
 
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_match_window = 'max:30'
+map <leader>b :CtrlPBuffer<cr>
+map <leader>f :CtrlP<cr>
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtSelectMove("j")': ['<c-j>', '<down>', '<c-n>'],
+  \ 'PrtSelectMove("k")': ['<c-k>', '<up>', '<c-p>'],
+  \ 'PrtHistory(-1)':       [''],
+  \ 'PrtHistory(1)':        [''] }
 
 if has("gui_running")
   set background=light
@@ -138,17 +145,6 @@ if has("gui_running")
   set guicursor+=a:blinkon0
   set guioptions-=L
   set number
-
-  " Since FZF doesn't work in MacVim, fall back to CtrlP
-  let g:ctrlp_working_path_mode = 0
-  let g:ctrlp_match_window = 'max:30'
-  map <leader>b :CtrlPBuffer<cr>
-  map <leader>f :CtrlP<cr>
-  let g:ctrlp_prompt_mappings = {
-    \ 'PrtSelectMove("j")': ['<c-j>', '<down>', '<c-n>'],
-    \ 'PrtSelectMove("k")': ['<c-k>', '<up>', '<c-p>'],
-    \ 'PrtHistory(-1)':       [''],
-    \ 'PrtHistory(1)':        [''] }
 endif
 
 
