@@ -110,7 +110,7 @@ inoremap <s-tab> <c-p>
 ""
 " filetype-specific configs
 ""
-autocmd BufReadPost quickfix set modifiable
+autocmd BufReadPost quickfix set modifiable cursorline
 autocmd Filetype c,cpp setlocal shiftwidth=4 tabstop=4
 autocmd Filetype eruby setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd Filetype markdown,orgdown,text setlocal nolist linebreak wrap nonumber
