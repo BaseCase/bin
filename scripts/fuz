@@ -6,7 +6,7 @@ main() {
   file_to_edit=`select_file $previous_file`
 
   if [ -n "$file_to_edit" ] ; then
-    vim "$file_to_edit"
+    "$EDITOR" "$file_to_edit"
     main "$file_to_edit"
   fi
 }
