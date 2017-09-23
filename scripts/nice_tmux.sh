@@ -33,4 +33,5 @@ attach_to_chosen_session() {
 parse_session_name() {
   echo "$1" | cut -d ':' -f 1
 }
+
 main
