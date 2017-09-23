@@ -115,6 +115,7 @@ alias j="jobs"
 alias json="pbpaste | python -m json.tool"
 alias man="prettyman"
 alias ne='PATH=$(npm bin):$PATH'
+alias nt="nice_tmux.sh"
 alias p="pbcopy"
 alias psh="pushd ~"
 alias ql="qlmanage -p" # OSX Finder's "quick look" preview thing
