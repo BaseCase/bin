@@ -8,6 +8,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'mileszs/ack.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'sheerun/vim-polyglot'
+  Plug 'slashmili/alchemist.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
