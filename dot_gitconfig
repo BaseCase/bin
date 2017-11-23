@@ -1,6 +1,6 @@
 [user]
-    name = Casey Brant
-    email = casey@caseybrant.com
+	name = Casey Brant
+	email = casey@caseybrant.com
 [color]
     status = auto
     branch = auto
