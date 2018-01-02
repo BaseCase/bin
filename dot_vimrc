@@ -23,7 +23,7 @@ call plug#end()
 set nocompatible
 set backspace=eol,indent,start
 set backupdir=~/.vim_backup
-set cursorline
+" set cursorline
 set directory=~/.vim_backup
 set foldopen-=search "search won't open closed folds on you
 set hidden
