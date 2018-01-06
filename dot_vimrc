@@ -6,14 +6,13 @@ autocmd!
 call plug#begin('~/.vim/bundle')
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'mileszs/ack.vim'
+  Plug 'racer-rust/vim-racer'
   Plug 'scrooloose/nerdtree'
   Plug 'sheerun/vim-polyglot'
   Plug 'slashmili/alchemist.vim'
   Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-surround'
-  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 call plug#end()
 
 
@@ -23,7 +22,7 @@ call plug#end()
 set nocompatible
 set backspace=eol,indent,start
 set backupdir=~/.vim_backup
-" set cursorline
+set cursorline
 set directory=~/.vim_backup
 set foldopen-=search "search won't open closed folds on you
 set hidden
@@ -48,8 +47,6 @@ set scrolloff=3
 set showtabline=2
 set winwidth=80
 set background=light
-highlight LineNr ctermfg=darkgrey
-hi VertSplit ctermbg=253 ctermfg=253
 
 
 ""
@@ -72,7 +69,6 @@ map * *N
 map <C-j> 10j
 map <C-k> 10k
 map <C-]> g<C-]>
-map K k
 imap <C-d> <C-o>x
 
 map <leader>` :set wrap!<cr>
@@ -126,9 +122,8 @@ command! Marked execute "!open " . expand('%:p') . " -a /Applications/Marked\\ 2
 ""
 " plugin-related settings
 ""
+" File nav stuff
 map <leader>z :NERDTreeToggle<cr>
-let g:jsx_ext_required = 0
-
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window = 'max:30'
 map <leader>b :CtrlPBuffer<cr>
@@ -140,15 +135,10 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtHistory(-1)':       [''],
   \ 'PrtHistory(1)':        [''] }
 
-if has("gui_running")
-  set background=light
-  colorscheme paramount
-  set cursorline
-  set guifont=InputMono:h14
-  set showtabline=1
-  set guicursor+=a:blinkon0
-  set guioptions-=L
-endif
-
+" Rust and vim-racer
+let g:racer_cmd = "/Users/cjb/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+au FileType rust nmap <C-]> <Plug>(rust-def)
+au FileType rust nmap gd <Plug>(rust-doc)
 
 source ~/.local_vimrc
