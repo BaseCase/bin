@@ -26,8 +26,6 @@ shopt -s histappend
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
-eval "$(rbenv init -)"
-
 
 ###################
 # RANDOM FUNCTIONS
