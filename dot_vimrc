@@ -41,13 +41,13 @@ set wildmenu
 " visual customizations
 ""
 set t_Co=256
-colorscheme paramount
+colorscheme ir_dark
 set cmdheight=2
 set ruler
 set scrolloff=3
 set showtabline=2
 set winwidth=80
-set background=light
+set background=dark
 
 
 ""
