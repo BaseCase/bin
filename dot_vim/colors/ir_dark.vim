@@ -37,7 +37,7 @@ hi LineNr           guifg=#3C3C3C     guibg=#232323     gui=NONE      ctermfg=da
 
 hi VertSplit        guifg=#404040     guibg=#404040     gui=NONE      ctermfg=darkgray    ctermbg=darkgray    cterm=NONE
 hi StatusLine       guifg=#CCCCCC     guibg=#404040     gui=italic    ctermfg=white       ctermbg=darkgray    cterm=NONE
-hi StatusLineNC     guifg=black       guibg=#404040     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE  
+hi StatusLineNC     guifg=black       guibg=#404040     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -63,7 +63,7 @@ if version >= 700 " Vim 7.x specific colors
   hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi Search         guifg=NONE        guibg=black       gui=underline ctermfg=NONE        ctermbg=NONE	      cterm=underline
+  hi Search         guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
 endif
 
 " Syntax highlighting
@@ -125,24 +125,24 @@ hi rubyStringDelimiter         guifg=#336633      guibg=NONE      gui=NONE      
 "hi link rubyArrayDelimiter    Special  " [ , , ]
 "rubyCurlyBlock  { , , }
 
-hi link rubyClass             Keyword 
-hi link rubyModule            Keyword 
-hi link rubyKeyword           Keyword 
+hi link rubyClass             Keyword
+hi link rubyModule            Keyword
+hi link rubyKeyword           Keyword
 hi link rubyOperator          Operator
 hi link rubyIdentifier        Identifier
 hi link rubyInstanceVariable  Identifier
 hi link rubyGlobalVariable    Identifier
 hi link rubyClassVariable     Identifier
-hi link rubyConstant          Type  
+hi link rubyConstant          Type
 
 
 " Special for Java
 " hi link javaClassDecl    Type
-hi link javaScopeDecl         Identifier 
-hi link javaCommentTitle      javaDocSeeTag 
-hi link javaDocTags           javaDocSeeTag 
-hi link javaDocParam          javaDocSeeTag 
-hi link javaDocSeeTagParam    javaDocSeeTag 
+hi link javaScopeDecl         Identifier
+hi link javaCommentTitle      javaDocSeeTag
+hi link javaDocTags           javaDocSeeTag
+hi link javaDocParam          javaDocSeeTag
+hi link javaDocSeeTagParam    javaDocSeeTag
 
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
@@ -150,27 +150,27 @@ hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      
 
 
 " Special for XML
-hi link xmlTag          Keyword 
-hi link xmlTagName      Conditional 
-hi link xmlEndTag       Identifier 
+hi link xmlTag          Keyword
+hi link xmlTagName      Conditional
+hi link xmlEndTag       Identifier
 
 
 " Special for HTML
-hi link htmlTag         Keyword 
-hi link htmlTagName     Conditional 
-hi link htmlEndTag      Identifier 
+hi link htmlTag         Keyword
+hi link htmlTagName     Conditional
+hi link htmlEndTag      Identifier
 
 
 " Special for Javascript
-hi link javaScriptNumber      Number 
+hi link javaScriptNumber      Number
 
 
 " Special for Python
-"hi  link pythonEscape         Keyword      
+"hi  link pythonEscape         Keyword
 
 
 " Special for CSharp
-hi  link csXmlTag             Keyword      
+hi  link csXmlTag             Keyword
 
 
 " Special for PHP
