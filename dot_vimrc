@@ -86,6 +86,7 @@ map <leader>n :e ~/Dropbox/scratch_notes.md<cr>
 map <leader>x :%!xxd<cr>
 " close current buffer without closing that split
 map <leader>q :bp \| bd #<cr>
+map <leader>p :!echo <c-r>% \| pbcopy<cr>
 
 
 ""
