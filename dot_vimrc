@@ -65,6 +65,8 @@ set tabstop=2
 " custom mappings
 ""
 let mapleader=","
+map j gj
+map k gk
 command! Q q
 command! W w
 map * *N
