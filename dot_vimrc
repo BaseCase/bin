@@ -121,7 +121,7 @@ autocmd Filetype markdown,orgdown,text setlocal nolist linebreak wrap nonumber
 autocmd Filetype python setlocal shiftwidth=4 tabstop=4
 
 " Open current file in Marked 2 app
-command! Marked execute "!open " . expand('%:p') . " -a /Applications/Marked\\ 2.app"
+command! Marked execute "!open \"" . expand('%:p') . "\" -a /Applications/Marked\\ 2.app"
 
 
 ""
