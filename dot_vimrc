@@ -5,14 +5,10 @@ autocmd!
 ""
 call plug#begin('~/.vim/bundle')
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'davidhalter/jedi-vim'
   Plug 'mileszs/ack.vim'
-  Plug 'racer-rust/vim-racer'
   Plug 'scrooloose/nerdtree'
   Plug 'sheerun/vim-polyglot'
-  Plug 'slashmili/alchemist.vim'
   Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-rails'
   Plug 'tpope/vim-surround'
 call plug#end()
 
@@ -140,10 +136,5 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtHistory(-1)':       [''],
   \ 'PrtHistory(1)':        [''] }
 
-" Rust and vim-racer
-let g:racer_cmd = "/Users/cjb/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
-au FileType rust nmap <C-]> <Plug>(rust-def)
-au FileType rust nmap gd <Plug>(rust-doc)
 
 source ~/.local_vimrc
