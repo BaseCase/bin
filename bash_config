@@ -20,6 +20,7 @@ export EDITOR="vim"
 
 # lots of history, and append it to histfile instead of overwriting
 export HISTSIZE=1000
+export HISTFILESIZE=100000
 shopt -s histappend
 
 # enable color in 'ls' output, even when piping to 'less'
