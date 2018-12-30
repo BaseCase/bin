@@ -11,7 +11,6 @@ export PATH="\
 /bin:\
 /usr/sbin:\
 /sbin:\
-~/global_npm/bin:\
 $CJB_BIN/scripts:\
 $CJB_BIN/bin:\
 "
@@ -94,11 +93,6 @@ alias gitc="hr && git diff --cached"
 
 # grep stuff
 alias grep="grep --color=auto -E --exclude=tags"
-alias jsgrep='find . -type f -and \( -name "*.coffee" -or -name "*.js" -or -name "*.hbs" \) -and -not \( -path "*node_modules*" -or -path "*bower_components*" -or -path "*tmp*" -or -path "*dist*" \) -print0 | xargs -0 grep'
-alias pygrep='find . -type f -and -name "*.py" -and -not -path "*migrations*" -print0 | xargs -0 grep'
-alias htmlgrep='find . -type f -and -name "*.html*" -print0 | xargs -0 grep'
-alias cgrep='find . -type f -and -name "*.c" -or -name "*.h" -print0 | xargs -0 grep'
-alias rbgrep='find . -type f -and -name "*.rb" -print0 | xargs -0 grep'
 
 # ls better
 alias ls="ls -FGC"
@@ -109,20 +103,13 @@ alias lal="la | less -R"
 
 # random helpers
 alias be="bundle exec"
-alias die_pyc="find . -name '*.pyc' -delete ; find . -type d -name '__pycache__' -delete"
 alias j="jobs"
 alias json="pbpaste | python -m json.tool"
 alias man="prettyman"
 alias ne='PATH=$(npm bin):$PATH'
-alias nt="nice_tmux.sh"
 alias p="pbcopy"
 alias psh="pushd ~"
-alias ql="qlmanage -p" # OSX Finder's "quick look" preview thing
-alias scr="screen -r"
-alias ttt="tmux attach || tmux"
-alias types="find . -type f -exec basename {} \; | rev | cut -d '.' -f 1 | rev | sort | uniq" # list all filetypes in this and child directories
 alias vi="vim"
-alias vv=". venv/bin/activate"
 alias x="xargs"
 
 
