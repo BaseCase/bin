@@ -35,4 +35,23 @@
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 
 
+
+;;
+;; evil config
+;;
+(evil-mode 1)
+(setq evil-search-wrap nil)
+;(define-key evil-insert-state-map "jk" 'evil-normal-state)
+(define-key evil-insert-state-map "C-c" 'evil-normal-state)
+
+
+;;
+;; key-chord config
+;;
+(key-chord-mode 1)
+(setq key-chord-two-keys-delay 0.05)
+(key-chord-define evil-insert-state-map  "jk" 'evil-normal-state)
+
+
+
 (provide 'cjb-entry-point)
