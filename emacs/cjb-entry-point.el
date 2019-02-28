@@ -46,7 +46,8 @@
   (lambda () (interactive) (evil-next-line 10)))
 (define-key evil-normal-state-map (kbd "C-k")
   (lambda () (interactive) (evil-previous-line 10)))
-
+(define-key evil-normal-state-map (kbd "C-y") 'yank)
+(define-key evil-normal-state-map (kbd "M-y") 'yank-pop)
 
 ;;
 ;; key-chord config
