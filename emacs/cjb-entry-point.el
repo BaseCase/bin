@@ -26,7 +26,8 @@
     (width . 100)
     (height . 50)
     (font . "Source Code Pro-14")))
-(tool-bar-mode -1)
+;; (tool-bar-mode -1)
+(menu-bar-mode -1)
 
 ;;
 ;; custom keybindings
@@ -41,8 +42,10 @@
 ;;
 (evil-mode 1)
 (setq evil-search-wrap nil)
-;(define-key evil-insert-state-map "jk" 'evil-normal-state)
-(define-key evil-insert-state-map "C-c" 'evil-normal-state)
+(define-key evil-normal-state-map (kbd "C-j")
+  (lambda () (interactive) (evil-next-line 10)))
+(define-key evil-normal-state-map (kbd "C-k")
+  (lambda () (interactive) (evil-previous-line 10)))
 
 
 ;;
