@@ -17,6 +17,7 @@
 (setq inhibit-splash-screen t)
 (setq scroll-conservatively 5)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(put 'narrow-to-region 'disabled nil)
 
 ;;
 ;; visual stuff
