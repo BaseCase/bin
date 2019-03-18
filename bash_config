@@ -109,6 +109,8 @@ alias lal="la | less -R"
 
 # random helpers
 alias be="bundle exec"
+alias et="emacsclient -tc"
+alias ew="emacsclient -nc"
 alias j="jobs"
 alias json="pbpaste | python -m json.tool"
 alias ne='PATH=$(npm bin):$PATH'
