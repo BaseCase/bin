@@ -18,6 +18,8 @@
 (setq scroll-conservatively 5)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (put 'narrow-to-region 'disabled nil)
+(setq sentence-end-double-space nil)
+(setq require-final-newline t)
 
 ;;
 ;; visual stuff
@@ -36,6 +38,12 @@
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 
+;;
+;; indentation
+;;
+(setq-default indent-tabs-mode nil)
+(setq tab-width 2)
+(add-hook 'c-mode-hook (lambda () (setq tab-width 4)))
 
 
 ;;
@@ -54,9 +62,8 @@
 ;; key-chord config
 ;;
 (key-chord-mode 1)
-(setq key-chord-two-keys-delay 0.05)
+(setq key-chord-two-keys-delay 0.2)
 (key-chord-define evil-insert-state-map  "jk" 'evil-normal-state)
-
 
 
 (provide 'cjb-entry-point)
