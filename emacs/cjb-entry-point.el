@@ -17,6 +17,7 @@
 (setq inhibit-splash-screen t)
 (setq scroll-conservatively 5)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'before-save-hook 'time-stamp)
 (put 'narrow-to-region 'disabled nil)
 (setq sentence-end-double-space nil)
 (setq require-final-newline t)
