@@ -6,12 +6,15 @@
 ;; GUI-only
 ;;
 (setq custom-safe-themes t)
-(if (daemonp)
-    (add-hook 'after-make-frame-functions
-              (lambda (frame)
-                (select-frame frame)
-                (load-theme 'spacemacs-light t)
-                (tool-bar-mode -1))))
+
+(defun cjb/set-theme-when-gui (frame)
+  (if (display-graphic-p frame)
+      (progn
+        (select-frame frame)
+        (load-theme 'spacemacs-light t)
+        (tool-bar-mode -1))))
+
+(add-hook 'after-make-frame-functions 'cjb/set-theme-when-gui)
 
 (setq default-frame-alist
   '(
