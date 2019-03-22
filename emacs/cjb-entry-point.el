@@ -1,12 +1,15 @@
-;;; -*- lexical-binding: t -*-
+;; -*- lexical-binding: t -*-
 
-;;
-;; Command is Meta on OSX
-;;
-(setq mac-option-key-is-meta nil)
-(setq mac-command-key-is-meta t)
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier nil)
+;; cjb-entry-point.el - The starting point for my Emacs setup. Loads in all other config.
+;;     Packages are configured one level up from this, in .emacs, because otherwise
+;;     there are problems...
+
+(require 'cjb-macos)
+(require 'cjb-whitespace-config)
+(require 'cjb-evil-config)
+(require 'cjb-key-chord-config)
+(require 'cjb-keybindings)
+(require 'cjb-visuals)
 
 ;;
 ;; misc settings
@@ -16,55 +19,8 @@
 (setq help-window-select t)
 (setq inhibit-splash-screen t)
 (setq scroll-conservatively 5)
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'before-save-hook 'time-stamp)
 (put 'narrow-to-region 'disabled nil)
-(setq sentence-end-double-space nil)
-(setq require-final-newline t)
-
-;;
-;; visual stuff
-;;
-(setq default-frame-alist
-  '(
-    (width . 100)
-    (height . 50)
-    (font . "Source Code Pro-14")))
-;; (tool-bar-mode -1)
-(menu-bar-mode -1)
-
-;;
-;; custom keybindings
-;;
-(global-set-key (kbd "C-w") 'backward-kill-word)
-(global-set-key (kbd "C-x C-b") 'buffer-menu)
-
-;;
-;; indentation
-;;
-(setq-default indent-tabs-mode nil)
-(setq tab-width 2)
-(add-hook 'c-mode-hook (lambda () (setq tab-width 4)))
-
-
-;;
-;; evil config
-;;
-(evil-mode 1)
-(setq evil-search-wrap nil)
-(define-key evil-normal-state-map (kbd "C-j")
-  (lambda () (interactive) (evil-next-line 10)))
-(define-key evil-normal-state-map (kbd "C-k")
-  (lambda () (interactive) (evil-previous-line 10)))
-(define-key evil-normal-state-map (kbd "C-y") 'yank)
-(define-key evil-normal-state-map (kbd "M-y") 'yank-pop)
-
-;;
-;; key-chord config
-;;
-(key-chord-mode 1)
-(setq key-chord-two-keys-delay 0.2)
-(key-chord-define evil-insert-state-map  "jk" 'evil-normal-state)
-
+(electric-pair-mode t)
 
 (provide 'cjb-entry-point)
