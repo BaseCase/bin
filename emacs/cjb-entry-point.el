@@ -22,5 +22,7 @@
 (add-hook 'before-save-hook 'time-stamp)
 (put 'narrow-to-region 'disabled nil)
 (electric-pair-mode t)
+(ido-mode t)
+(setq ido-enable-flex-matching t)
 
 (provide 'cjb-entry-point)
