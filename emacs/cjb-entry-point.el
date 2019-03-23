@@ -14,6 +14,7 @@
 ;;
 ;; misc settings
 ;;
+(setq gc-cons-threshold 20000000)
 (prefer-coding-system 'utf-8)
 (setq make-backup-files nil)
 (setq help-window-select t)
