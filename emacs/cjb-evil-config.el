@@ -3,6 +3,7 @@
 ;; cjb-evil-config.el - Set up evil mode
 
 (evil-mode 1)
+(evil-commentary-mode 1)
 (setq evil-search-wrap nil)
 (setq evil-search-module "evil-search")
 

@@ -10,6 +10,7 @@
         clojure-mode
         clojure-mode-extra-font-locking
         evil
+        evil-commentary
         key-chord
         markdown-mode
         spacemacs-theme
