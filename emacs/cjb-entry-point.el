@@ -23,7 +23,13 @@
 (add-hook 'before-save-hook 'time-stamp)
 (put 'narrow-to-region 'disabled nil)
 (electric-pair-mode t)
+
+;;
+;; file and buffer navigation
+;;
 (ido-mode t)
+(ido-vertical-mode t)
 (setq ido-enable-flex-matching t)
+(setq ido-vertical-define-keys 'C-n-and-C-p-only)
 
 (provide 'cjb-entry-point)

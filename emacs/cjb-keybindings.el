@@ -20,6 +20,7 @@
 (define-key evil-normal-state-map (kbd "C-y") 'yank)
 (define-key evil-normal-state-map (kbd "M-y") 'yank-pop)
 (define-key evil-normal-state-map (kbd (cjb/leader "`")) 'visual-line-mode)
+(define-key evil-normal-state-map (kbd (cjb/leader "b")) 'ido-switch-buffer)
 
 ;; key-chord ones
 (key-chord-define evil-insert-state-map  "jk" 'evil-normal-state)
