@@ -7,9 +7,15 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
+(setq evil-shift-width 2)
 (setq sentence-end-double-space nil)
 (setq require-final-newline t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(add-hook 'cc-mode-hook (lambda () (setq tab-width 4)))
+
+(add-hook 'html-mode-hook
+          (lambda ()
+            (set (make-local-variable 'evil-shift-width) 2)
+            (set (make-local-variable 'sgml-basic-offset) 2)
+            (set (make-local-variable 'tab-width) 2)))
 
 (provide 'cjb-whitespace-config)
