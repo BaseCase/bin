@@ -10,6 +10,8 @@
 (require 'cjb-key-chord-config)
 (require 'cjb-keybindings)
 (require 'cjb-visuals)
+(require 'cjb-clojure-config)
+(require 'cjb-c-config)
 
 ;;
 ;; misc settings
