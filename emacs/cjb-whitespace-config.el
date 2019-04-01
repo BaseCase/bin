@@ -12,6 +12,10 @@
 (setq require-final-newline t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; Define what comprises a single word for word-wise motion and '*' searches
+(modify-syntax-entry ?_ "w")
+(modify-syntax-entry ?- "w")
+
 (add-hook 'html-mode-hook
           (lambda ()
             (set (make-local-variable 'evil-shift-width) 2)
