@@ -2,20 +2,24 @@
 
 ;; cjb-visuals.el - Visual customizations, both terminal and GUI
 
-;;
-;; GUI-only
-;;
 (setq custom-safe-themes t)
 
-(defun cjb/set-theme-when-gui (frame)
-  (if (display-graphic-p frame)
-      (progn
-        (select-frame frame)
-        (load-theme 'spacemacs-light t)
-        (tool-bar-mode -1)
-        (scroll-bar-mode -1))))
+(defun cjb/visuals-for-gui ()
+  (load-theme 'spacemacs-light t)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1))
 
-(add-hook 'after-make-frame-functions 'cjb/set-theme-when-gui)
+(defun cjb/visuals-for-terminal ()
+  (load-theme 'spacemacs-dark t))
+
+(defun cjb/set-visuals-by-context (frame)
+  (progn
+    (select-frame frame)
+    (if (display-graphic-p frame)
+        (cjb/visuals-for-gui)
+        (cjb/visuals-for-terminal))))
+
+(add-hook 'after-make-frame-functions 'cjb/set-visuals-by-context)
 
 (setq default-frame-alist
   '(
