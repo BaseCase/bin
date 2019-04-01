@@ -21,8 +21,17 @@
 (define-key evil-normal-state-map (kbd "M-y") 'yank-pop)
 (define-key evil-normal-state-map (kbd (cjb/leader "`")) 'visual-line-mode)
 (define-key evil-normal-state-map (kbd (cjb/leader "b")) 'ido-switch-buffer)
+(define-key evil-insert-state-map (kbd "C-a") 'beginning-of-line)
+(define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
 
 ;; key-chord ones
 (key-chord-define evil-insert-state-map  "jk" 'evil-normal-state)
+
+;; Dired
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (define-key dired-mode-map (kbd "^")
+              (lambda () (interactive) (find-alternate-file "..")))))
+
 
 (provide 'cjb-keybindings)

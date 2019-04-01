@@ -25,6 +25,7 @@
 (add-hook 'before-save-hook 'time-stamp)
 (put 'narrow-to-region 'disabled nil)
 (electric-pair-mode t)
+(put 'dired-find-alternate-file 'disabled nil)
 
 ;;
 ;; file and buffer navigation
