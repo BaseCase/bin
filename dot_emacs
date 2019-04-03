@@ -8,12 +8,13 @@
       '(
         cider
         clojure-mode
-        clojure-mode-extra-font-locking
         evil
         evil-commentary
         ido-vertical-mode
         key-chord
+        magit
         markdown-mode
+        night-owl-theme
         spacemacs-theme
         yaml-mode
         ))

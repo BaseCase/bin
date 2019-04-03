@@ -4,8 +4,10 @@
 
 (setq custom-safe-themes t)
 
+(column-number-mode t)
+
 (defun cjb/visuals-for-gui ()
-  (load-theme 'spacemacs-light t)
+  (load-theme 'night-owl t)
   (tool-bar-mode -1)
   (scroll-bar-mode -1))
 
