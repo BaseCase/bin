@@ -30,11 +30,18 @@
     (height . 50)
     (font . "Source Code Pro-14")))
 
-;;
-;; Everywhere
-;;
 (menu-bar-mode -1)
 (which-function-mode t)
 (show-paren-mode t)
+
+(defun cjb/dark ()
+  (interactive)
+  (disable-theme 'material-light)
+  (load-theme 'night-owl t))
+
+(defun cjb/light ()
+  (interactive)
+  (disable-theme 'night-owl)
+  (load-theme 'material-light t))
 
 (provide 'cjb-visuals)
