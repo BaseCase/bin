@@ -5,14 +5,15 @@
 (setq custom-safe-themes t)
 
 (column-number-mode t)
+(load-theme 'night-owl t)
 
 (defun cjb/visuals-for-gui ()
-  (load-theme 'night-owl t)
   (tool-bar-mode -1)
   (scroll-bar-mode -1))
 
 (defun cjb/visuals-for-terminal ()
-  (load-theme 'spacemacs-dark t))
+  ;; placeholder for terminal-specific config
+  )
 
 (defun cjb/set-visuals-by-context (frame)
   (progn
