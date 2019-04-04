@@ -12,14 +12,36 @@
 (setq require-final-newline t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; Define what comprises a single word for word-wise motion and '*' searches
-(modify-syntax-entry ?_ "w")
-(modify-syntax-entry ?- "w")
+;;
+;; make word motion and '*' work how I expect on '-' and '_' depending on language mode
+;;
+(setq cjb/modes-with-dash-words
+      '(emacs-lisp-mode-hook
+        html-mode-hook
+        css-mode-hook
+        clojure-mode-hook))
+(setq cjb/modes-with-underscore-words
+      '(html-mode-hook
+        swift-mode-hook
+        c-mode-common-hook))
 
+(dolist (hook cjb/modes-with-dash-words nil)
+  (add-hook hook (lambda () (modify-syntax-entry ?- "w"))))
+
+(dolist (hook cjb/modes-with-underscore-words nil)
+  (add-hook hook (lambda () (modify-syntax-entry ?_ "w"))))
+
+;;
+;; get indentation right per language (maybe goes in language-specific config files)
+;;
 (add-hook 'html-mode-hook
           (lambda ()
             (set (make-local-variable 'evil-shift-width) 2)
             (set (make-local-variable 'sgml-basic-offset) 2)
             (set (make-local-variable 'tab-width) 2)))
+
+(add-hook 'css-mode-hook
+          (lambda ()
+            (set (make-local-variable 'css-indent-offset) 2)))
 
 (provide 'cjb-whitespace-config)
