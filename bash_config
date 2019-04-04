@@ -109,8 +109,9 @@ alias lal="la | less -R"
 
 # random helpers
 alias be="bundle exec"
-alias et="emacsclient -tc"
-alias ew="emacsclient -nc"
+alias ee="emacsclient -n"    # open file in existing emacsclient session
+alias et="emacsclient -tc"   # open file in new emacsclient session in terminal
+alias ew="emacsclient -nc"   # open file in new emacsclient session in GUI
 alias j="jobs"
 alias json="pbpaste | python -m json.tool"
 alias ne='PATH=$(npm bin):$PATH'
