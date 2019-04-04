@@ -25,7 +25,14 @@
 (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
 
 ;; key-chord ones
-(key-chord-define evil-insert-state-map  "jk" 'evil-normal-state)
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+
+;; Bookmark View
+(add-hook 'bookmark-bmenu-mode-hook
+          (lambda () (local-set-key (kbd "j") 'evil-next-line)))
+
+(add-hook 'bookmark-bmenu-mode-hook
+          (lambda () (local-set-key (kbd "k") 'evil-previous-line)))
 
 ;; Dired
 (add-hook 'dired-mode-hook
