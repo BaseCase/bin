@@ -23,7 +23,8 @@
 (setq cjb/modes-with-underscore-words
       '(html-mode-hook
         swift-mode-hook
-        c-mode-common-hook))
+        c-mode-common-hook
+        python-mode-hook))
 
 (dolist (hook cjb/modes-with-dash-words nil)
   (add-hook hook (lambda () (modify-syntax-entry ?- "w"))))
