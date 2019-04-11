@@ -31,7 +31,6 @@
     (font . "Source Code Pro-14")))
 
 (menu-bar-mode -1)
-(which-function-mode t)
 (show-paren-mode t)
 
 (defun cjb/dark ()
