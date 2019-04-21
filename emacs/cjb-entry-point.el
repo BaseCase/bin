@@ -12,6 +12,7 @@
 (require 'cjb-visuals)
 (require 'cjb-clojure-config)
 (require 'cjb-c-config)
+(require 'cjb-computer-programming)
 
 ;;
 ;; misc settings

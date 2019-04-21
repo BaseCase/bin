@@ -25,6 +25,7 @@
 
 (define-key evil-insert-state-map (kbd "C-a") 'beginning-of-line)
 (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
+(define-key evil-insert-state-map (kbd "<tab>") 'company-complete)
 
 ;; key-chord ones
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
