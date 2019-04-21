@@ -12,8 +12,8 @@
   (scroll-bar-mode -1))
 
 (defun cjb/visuals-for-terminal ()
-  ;; placeholder for terminal-specific config
-  )
+  (dolist (theme custom-enabled-themes nil)
+    (disable-theme theme)))
 
 (defun cjb/set-visuals-by-context (frame)
   (progn
