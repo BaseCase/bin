@@ -9,10 +9,13 @@
         cider
         clojure-mode
         company
+        company-lsp
+        enh-ruby-mode
         evil
         evil-commentary
         ido-vertical-mode
         key-chord
+        lsp-mode
         magit
         markdown-mode
         material-theme
