@@ -44,4 +44,35 @@
               (lambda () (interactive) (find-alternate-file "..")))))
 
 
+;; Somewhat bananas attempt to get a consistent interface over any mode's REPL interaction...
+;;
+;; I define 4 regularly used REPL interactions:
+;;   + "begin" - Launch the REPL associated with this mode
+;;   + "sexp-esque" - Do the closest available thing to "send last sexp"
+;;   + "region" - Send the selected (in evil visual mode) block to the REPL
+;;   + "line" - Send the current line to the REPL
+;;
+;; To add support for a new language, add a new entry to this
+;; alist with the four expected keys.
+(setq mode-hooks-to-repl-functions
+      '((sql-mode-hook . ((begin . sql-postgres)
+                          (sexp-esque . sql-send-paragraph)
+                          (region . sql-send-region)
+                          (line . sql-send-line-and-next)))
+
+        (enh-ruby-mode-hook . ((begin . inf-ruby-console-auto)
+                               (sexp-esque . ruby-send-last-sexp)
+                               (region . ruby-send-region)
+                               (line . ruby-send-line)))))
+
+(dolist (mode-alist mode-hooks-to-repl-functions nil)
+  (let ((mode-hook (car mode-alist))
+        (repl-functions (cdr mode-alist)))
+    (add-hook mode-hook
+              (lambda ()
+                (evil-local-set-key 'normal (kbd (cjb/leader "r" "b")) (alist-get 'begin repl-functions))
+                (evil-local-set-key 'normal (kbd (cjb/leader "r" "s")) (alist-get 'sexp-esque repl-functions))
+                (evil-local-set-key 'normal (kbd (cjb/leader "r" "l")) (alist-get 'line repl-functions))
+                (evil-local-set-key 'visual (kbd (cjb/leader "r" "r")) (alist-get 'region repl-functions))))))
+
 (provide 'cjb-keybindings)
