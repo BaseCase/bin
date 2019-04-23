@@ -17,6 +17,7 @@
         inf-ruby
         key-chord
         lsp-mode
+        lsp-sourcekit
         magit
         markdown-mode
         material-theme
