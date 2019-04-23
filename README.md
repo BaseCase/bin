@@ -15,6 +15,10 @@
 3. Run `M-x package-install-selected-packages`
 4. Restart Emacs
 
+### LSP for emacs
++ Follow [these instructions](https://github.com/emacs-lsp/lsp-mode#supported-languages)
+  for each language you want to use LSP with.
+
 ## adding a new dotfile
 Any file in this folder named "dot\_*" will be included in the install process.
 
