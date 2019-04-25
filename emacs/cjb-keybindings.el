@@ -63,7 +63,12 @@
         (enh-ruby-mode-hook . ((begin . inf-ruby-console-auto)
                                (sexp-esque . ruby-send-last-sexp)
                                (region . ruby-send-region)
-                               (line . ruby-send-line)))))
+                               (line . ruby-send-line)))
+
+        (swift-mode-hook . ((begin . swift-mode:run-repl)
+                            (sexp-esque . swift-mode:send-buffer)
+                            (region . swift-mode:send-region)
+                            (line . swift-mode:send-region)))))
 
 (dolist (mode-alist mode-hooks-to-repl-functions nil)
   (let ((mode-hook (car mode-alist))
