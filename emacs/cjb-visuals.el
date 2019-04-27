@@ -7,6 +7,11 @@
 (column-number-mode t)
 (load-theme 'night-owl t)
 
+(setq visible-bell nil)
+(setq ring-bell-function (lambda ()
+                           (invert-face 'mode-line)
+                           (run-with-timer 0.1 nil #'invert-face 'mode-line)))
+
 (defun cjb/visuals-for-gui ()
   (tool-bar-mode -1)
   (scroll-bar-mode -1))
