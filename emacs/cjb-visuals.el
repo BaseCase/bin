@@ -14,6 +14,7 @@
 
 (defun cjb/visuals-for-gui ()
   (tool-bar-mode -1)
+  (global-hl-line-mode t)
   (scroll-bar-mode -1))
 
 (defun cjb/visuals-for-terminal ()
