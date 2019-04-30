@@ -118,6 +118,7 @@ alias ne='PATH=$(npm bin):$PATH'
 alias p="pbcopy"
 alias pman="prettyman"
 alias psh="pushd ~"
+alias showpath='echo $PATH | ruby -e "puts \$stdin.read().split(\":\")"'
 alias vi="vim"
 alias x="xargs"
 
