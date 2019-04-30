@@ -18,7 +18,7 @@ $CJB_BIN/bin:\
 export EDITOR="vim"
 
 # lots of history, and append it to histfile instead of overwriting
-export HISTSIZE=1000
+export HISTSIZE=10000
 export HISTFILESIZE=100000
 shopt -s histappend
 
