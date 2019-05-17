@@ -37,4 +37,11 @@
 (setq ido-vertical-define-keys 'C-n-and-C-p-only)
 (add-hook 'dired-mode-hook (lambda () (rename-buffer (concat (buffer-name) "/"))))
 
+;;
+;; org-mode stuff. This should go into its own file.
+;;
+(setq org-todo-keywords
+      '((sequence "TODO" "WORKING" "|" "DONE")))
+(setq org-todo-keyword-faces '(("WORKING" . (:foreground "yellow" :background "black"))))
+
 (provide 'cjb-entry-point)
