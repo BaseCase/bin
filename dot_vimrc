@@ -70,7 +70,6 @@ map <C-j> 10j
 map <C-k> 10k
 map <C-]> g<C-]>
 imap <C-d> <C-o>x
-imap jk <esc>
 
 map <leader>` :set wrap!<cr>
 map <leader>c :%w !pbcopy<CR>
