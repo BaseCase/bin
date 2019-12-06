@@ -6,25 +6,19 @@
 
 (setq package-selected-packages
       '(
-        cider
-        clojure-mode
-        company
-        company-lsp
-        enh-ruby-mode
-        evil
-        evil-commentary
-        ido-vertical-mode
-        inf-ruby
-        key-chord
-        lsp-mode
-        lsp-sourcekit
-        magit
-        markdown-mode
-        material-theme
-        night-owl-theme
-        projectile
-        swift-mode
-        yaml-mode
+        company              ; nicer autocomplete UI
+        company-lsp          ; connect previous to LSP
+        evil                 ; vim emulation
+        evil-commentary      ; shortcuts for commenting/uncommenting blocks of code
+        ido-vertical-mode    ; UI improvement for the built-in ido-mode
+        lsp-mode             ; connect to LSP servers
+        lsp-sourcekit        ; LSP for Swift, because Apple is special
+        magit                ; the very good git UI
+        markdown-mode        ; I guess we don't do markdown out of the box?
+        night-owl-theme      ; color theme
+        projectile           ; project utilities...I actually forget why I added this
+        swift-mode           ; Swift syntax highlighting
+        yaml-mode            ; Thanks, I hate it
         ))
 
 (add-to-list 'load-path "~/bin/emacs")

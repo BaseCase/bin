@@ -1,18 +1,10 @@
 ;; -*- lexical-binding: t -*-
 
-;; cjb-entry-point.el - The starting point for my Emacs setup. Loads in all other config.
-;;     Packages are configured one level up from this, in .emacs, because otherwise
-;;     there are problems...
-
-(require 'cjb-macos)
-(require 'cjb-whitespace-config)
-(require 'cjb-evil-config)
-(require 'cjb-key-chord-config)
-(require 'cjb-keybindings)
 (require 'cjb-visuals)
-(require 'cjb-clojure-config)
-(require 'cjb-c-config)
+(require 'cjb-evil-config)
+(require 'cjb-keybindings)
 (require 'cjb-computer-programming)
+(require 'cjb-org-mode-config)
 
 ;;
 ;; misc settings
@@ -29,6 +21,24 @@
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;;
+;; make modifier keys work right on macOS
+;;
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
+
+;;
+;; whitespace
+;;
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq evil-shift-width 2)
+(setq sentence-end-double-space nil)
+(setq require-final-newline t)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;;
 ;; file and buffer navigation
 ;;
 (ido-mode t)
@@ -36,12 +46,5 @@
 (setq ido-enable-flex-matching t)
 (setq ido-vertical-define-keys 'C-n-and-C-p-only)
 (add-hook 'dired-mode-hook (lambda () (rename-buffer (concat (buffer-name) "/"))))
-
-;;
-;; org-mode stuff. This should go into its own file.
-;;
-(setq org-todo-keywords
-      '((sequence "TODO" "WORKING" "|" "DONE")))
-(setq org-todo-keyword-faces '(("WORKING" . (:foreground "yellow" :background "black"))))
 
 (provide 'cjb-entry-point)
