@@ -15,7 +15,8 @@
         lsp-sourcekit        ; LSP for Swift, because Apple is special
         magit                ; the very good git UI
         markdown-mode        ; I guess we don't do markdown out of the box?
-        night-owl-theme      ; color theme
+        material-theme       ; color theme, for light times
+        night-owl-theme      ; color theme, for dark times
         projectile           ; project utilities...I actually forget why I added this
         swift-mode           ; Swift syntax highlighting
         yaml-mode            ; Thanks, I hate it
