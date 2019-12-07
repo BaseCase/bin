@@ -46,5 +46,6 @@
 (setq ido-enable-flex-matching t)
 (setq ido-vertical-define-keys 'C-n-and-C-p-only)
 (add-hook 'dired-mode-hook (lambda () (rename-buffer (concat (buffer-name) "/"))))
+(add-hook 'compilation-mode-hook (lambda () (toggle-truncate-lines)))
 
 (provide 'cjb-entry-point)
