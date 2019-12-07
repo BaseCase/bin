@@ -6,7 +6,7 @@
 (projectile-global-mode t)
 (global-company-mode t)
 (push 'company-lsp company-backends)
-(setq company-idle-delay 10)
+(setq company-idle-delay nil)
 (setq lsp-prefer-flymake :none)
 (setq comint-process-echoes t)
 (add-hook 'comint-mode-hook (lambda () (toggle-truncate-lines 1)))

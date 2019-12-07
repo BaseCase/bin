@@ -21,10 +21,7 @@
 
 (define-key evil-insert-state-map (kbd "C-a") 'beginning-of-line)
 (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
-;; TODO: this company-complete shortcut doesn't work (shadowed by mark
-;;       command), figure out a better way to map it (but I do still
-;;       want to have it around)
-(define-key evil-insert-state-map (kbd "C-<spc>") 'company-complete)
+(define-key evil-insert-state-map (kbd "C-SPC") 'company-complete)
 (define-key evil-insert-state-map (kbd "C-c") 'evil-normal-state)
 
 ;; Bookmark List (M-x list-bookmarks)
