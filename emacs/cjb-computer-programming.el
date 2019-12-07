@@ -51,7 +51,6 @@
 ;;
 (require 'lsp-sourcekit)
 (setq lsp-sourcekit-executable (expand-file-name "~/bin/bin/sourcekit-lsp"))
-(add-hook 'swift-mode-hook #'lsp)
 
 ;;
 ;; C
