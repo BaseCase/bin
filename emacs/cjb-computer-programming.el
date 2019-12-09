@@ -33,18 +33,24 @@
 ;;
 ;; HTML
 ;;
+(setq-default sgml-basic-offset 2)
 (add-hook 'html-mode-hook
           (lambda ()
             (set (make-local-variable 'evil-shift-width) 2)
-            (set (make-local-variable 'sgml-basic-offset) 2)
             (set (make-local-variable 'tab-width) 2)))
+
+;;
+;; JavaScript
+;;
+(setq-default js-indent-level 2)
+(add-hook 'js-mode-hook
+          (lambda ()
+            (set (make-local-variable 'evil-shift-width) 2)))
 
 ;;
 ;; CSS
 ;;
-(add-hook 'css-mode-hook
-          (lambda ()
-            (set (make-local-variable 'css-indent-offset) 2)))
+(setq-default css-indent-offset 2)
 
 ;;
 ;; Swift
