@@ -48,6 +48,32 @@
             (set (make-local-variable 'evil-shift-width) 2)))
 
 ;;
+;; TypeScript (and friends)
+;;
+(defun cjb/setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (eldoc-mode +1)
+  (company-mode +1)
+  (setq-local company-idle-delay 0))
+
+(add-hook 'typescript-mode-hook #'cjb/setup-tide-mode)
+(add-hook 'js-mode-hook #'cjb/setup-tide-mode)
+(setq company-tooltip-align-annotations t)
+(setq typescript-indent-level 2)
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when
+                (or
+                 (string-equal "tsx" (file-name-extension buffer-file-name))
+                 (string-equal "jsx" (file-name-extension buffer-file-name)))
+              (cjb/setup-tide-mode))))
+
+;;
 ;; CSS
 ;;
 (setq-default css-indent-offset 2)

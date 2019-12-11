@@ -19,6 +19,8 @@
         night-owl-theme      ; color theme, for dark times
         projectile           ; project utilities...I actually forget why I added this
         swift-mode           ; Swift syntax highlighting
+        tide                 ; TypeScript Interactive Development Environment
+        web-mode             ; lots of good web stuff, especially mutli-language buffers
         yaml-mode            ; Thanks, I hate it
         ))
 
