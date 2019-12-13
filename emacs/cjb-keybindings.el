@@ -12,6 +12,8 @@
   (apply 'concat
          (cons cjb/leader-key keys)))
 
+(define-key evil-normal-state-map (kbd "M-n") 'make-frame)
+(define-key evil-normal-state-map (kbd "M-w") 'delete-frame)
 (define-key evil-normal-state-map (kbd "C-y") 'yank)
 (define-key evil-normal-state-map (kbd "M-y") 'yank-pop)
 (define-key evil-normal-state-map (kbd (cjb/leader "`")) 'visual-line-mode)
