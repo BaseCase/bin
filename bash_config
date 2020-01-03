@@ -134,12 +134,6 @@ number_of_running_jobs() {
   fi
 }
 
-warn_if_i_have_uncleared_scratch_notes() {
-  if [ -s ~/Dropbox/scratch_notes.md ] ; then
-    echo "!!"
-  fi
-}
-
 now() {
   date "+%H:%M"
 }
