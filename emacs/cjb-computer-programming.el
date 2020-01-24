@@ -94,3 +94,10 @@
             (set (make-local-variable 'evil-shift-width) cjb-c-indent)))
 
 (provide 'cjb-computer-programming)
+
+;;
+;; Elixir
+;;
+(add-hook 'elixir-mode-hook
+          (lambda ()
+            (set (make-local-variable 'evil-shift-width) 2)))
