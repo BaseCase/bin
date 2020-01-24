@@ -19,6 +19,7 @@
 (put 'narrow-to-region 'disabled nil)
 (electric-pair-mode t)
 (put 'dired-find-alternate-file 'disabled nil)
+(server-start)
 
 ;;
 ;; make modifier keys work right on macOS
