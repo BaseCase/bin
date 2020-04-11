@@ -8,13 +8,10 @@
       '(
         ag                   ; front end for the silver searcher
         company              ; nicer autocomplete UI
-        company-lsp          ; connect previous to LSP
         elixir-mode          ; a mode for, get this, elixir
         evil                 ; vim emulation
         evil-commentary      ; shortcuts for commenting/uncommenting blocks of code
         ido-vertical-mode    ; UI improvement for the built-in ido-mode
-        lsp-mode             ; connect to LSP servers
-        lsp-sourcekit        ; LSP for Swift, because Apple is special
         magit                ; the very good git UI
         markdown-mode        ; I guess we don't do markdown out of the box?
         material-theme       ; color theme, for light times

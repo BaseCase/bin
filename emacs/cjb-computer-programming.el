@@ -1,13 +1,11 @@
 ;; -*- lexical-binding: t -*-
 
-;; Various programming things like completion, LSP, project
+;; Various programming things like completion, project
 ;; navigation, etc. Also, language-specific stuff like indentation.
 
 (projectile-global-mode t)
 (global-company-mode t)
-(push 'company-lsp company-backends)
 (setq company-idle-delay nil)
-(setq lsp-prefer-flymake :none)
 (setq comint-process-echoes t)
 (add-hook 'comint-mode-hook (lambda () (toggle-truncate-lines 1)))
 
@@ -81,8 +79,6 @@
 ;;
 ;; Swift
 ;;
-(require 'lsp-sourcekit)
-(setq lsp-sourcekit-executable (expand-file-name "~/bin/bin/sourcekit-lsp"))
 
 ;;
 ;; C
