@@ -20,7 +20,8 @@
       '(html-mode-hook
         swift-mode-hook
         c-mode-common-hook
-        python-mode-hook))
+        python-mode-hook
+        elixir-mode-hook))
 
 (dolist (hook cjb/modes-with-dash-words nil)
   (add-hook hook (lambda () (modify-syntax-entry ?- "w"))))
