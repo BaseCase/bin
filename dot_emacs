@@ -16,6 +16,7 @@
         markdown-mode        ; I guess we don't do markdown out of the box?
         material-theme       ; color theme, for light times
         night-owl-theme      ; color theme, for dark times
+        org                  ; install here to get latest version
         projectile           ; project utilities...I actually forget why I added this
         swift-mode           ; Swift syntax highlighting
         tide                 ; TypeScript Interactive Development Environment
