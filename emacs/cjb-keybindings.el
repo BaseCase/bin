@@ -22,6 +22,8 @@
 (define-key evil-normal-state-map (kbd (cjb/leader "p")) 'projectile-command-map)
 (define-key evil-normal-state-map (kbd (cjb/leader "f")) 'projectile-find-file)
 (define-key evil-normal-state-map (kbd (cjb/leader "w")) 'projectile-grep)
+(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 
 (define-key evil-insert-state-map (kbd "C-a") 'beginning-of-line)
 (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
