@@ -23,5 +23,6 @@
         yaml-mode            ; Thanks, I hate it
         ))
 
-(add-to-list 'load-path "~/bin/emacs")
+;; TODO: move emacs config location to an env var
+(add-to-list 'load-path "c:/Users/Casey/bin/emacs")
 (require 'cjb-entry-point)
