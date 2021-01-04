@@ -8,7 +8,6 @@
       '(
         ag                   ; front end for the silver searcher
         company              ; nicer autocomplete UI
-        elixir-mode          ; a mode for, get this, elixir
         evil                 ; vim emulation
         evil-commentary      ; shortcuts for commenting/uncommenting blocks of code
         ido-vertical-mode    ; UI improvement for the built-in ido-mode
@@ -17,10 +16,7 @@
         material-theme       ; color theme, for light times
         night-owl-theme      ; color theme, for dark times
         projectile           ; project utilities...I actually forget why I added this
-        swift-mode           ; Swift syntax highlighting
-        tide                 ; TypeScript Interactive Development Environment
         web-mode             ; lots of good web stuff, especially mutli-language buffers
-        yaml-mode            ; Thanks, I hate it
         ))
 
 ;; TODO: move emacs config location to an env var

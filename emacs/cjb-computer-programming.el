@@ -18,10 +18,8 @@
         css-mode-hook))
 (setq cjb/modes-with-underscore-words
       '(html-mode-hook
-        swift-mode-hook
         c-mode-common-hook
-        python-mode-hook
-        elixir-mode-hook))
+        python-mode-hook))
 
 (dolist (hook cjb/modes-with-dash-words nil)
   (add-hook hook (lambda () (modify-syntax-entry ?- "w"))))
@@ -46,44 +44,15 @@
           (lambda ()
             (set (make-local-variable 'evil-shift-width) 2)))
 
-;;
-;; TypeScript (and friends)
-;;
-(defun cjb/setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (eldoc-mode +1)
-  (company-mode +1)
-  (setq-local company-idle-delay 0))
-
-(add-hook 'typescript-mode-hook #'cjb/setup-tide-mode)
-(setq company-tooltip-align-annotations t)
-(setq typescript-indent-level 2)
-
 (require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.ts[x]\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.js[x]?\\'" . web-mode))
-(setq web-mode-content-types-alist
-      '(("jsx" . "\\.js[x]?\\'")))
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-code-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
-(add-hook 'web-mode-hook
-          (lambda ()
-            (when
-                (or
-                 (string-equal "tsx" (file-name-extension buffer-file-name))
-                 (string-equal "jsx" (file-name-extension buffer-file-name)))
-              (cjb/setup-tide-mode))))
 
 ;;
 ;; CSS
 ;;
 (setq-default css-indent-offset 2)
-
-;;
-;; Swift
-;;
 
 ;;
 ;; C
@@ -95,10 +64,3 @@
             (set (make-local-variable 'evil-shift-width) cjb-c-indent)))
 
 (provide 'cjb-computer-programming)
-
-;;
-;; Elixir
-;;
-(add-hook 'elixir-mode-hook
-          (lambda ()
-            (set (make-local-variable 'evil-shift-width) 2)))
