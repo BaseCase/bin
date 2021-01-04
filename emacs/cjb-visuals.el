@@ -11,7 +11,7 @@
   '(
     (width . 100)
     (height . 50)
-    (font . "DejaVu Sans Mono 13")))
+    (font . "Consolas-11.0")))
 
 (setq visible-bell nil)
 (setq ring-bell-function (lambda ()
