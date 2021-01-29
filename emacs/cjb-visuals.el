@@ -11,7 +11,7 @@
   '(
     (width . 100)
     (height . 50)
-    (font . "Consolas-11.0")))
+    (font . "JetBrains Mono NL-11.0")))
 
 (setq visible-bell nil)
 (setq ring-bell-function (lambda ()
@@ -19,16 +19,16 @@
                            (run-with-timer 0.1 nil #'invert-face 'mode-line)))
 
 (setq custom-safe-themes t)
-(load-theme 'night-owl t)
+(load-theme 'modus-operandi t)
 
 (defun cjb/dark ()
   (interactive)
-  (disable-theme 'material-light)
-  (load-theme 'night-owl t))
+  (disable-theme 'modus-operandi)
+  (load-theme 'modus-vivendi t))
 
 (defun cjb/light ()
   (interactive)
-  (disable-theme 'night-owl)
-  (load-theme 'material-light t))
+  (disable-theme 'modus-vivendi)
+  (load-theme 'modus-operandi t))
 
 (provide 'cjb-visuals)

@@ -19,6 +19,7 @@
 (setq cjb/modes-with-underscore-words
       '(html-mode-hook
         c-mode-common-hook
+        lua-mode-hook
         python-mode-hook))
 
 (dolist (hook cjb/modes-with-dash-words nil)

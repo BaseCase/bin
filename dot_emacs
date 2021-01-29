@@ -11,11 +11,12 @@
         evil                 ; vim emulation
         evil-commentary      ; shortcuts for commenting/uncommenting blocks of code
         ido-vertical-mode    ; UI improvement for the built-in ido-mode
+        lua-mode             ; Lua time!
         magit                ; the very good git UI
         markdown-mode        ; I guess we don't do markdown out of the box?
-        material-theme       ; color theme, for light times
-        night-owl-theme      ; color theme, for dark times
+        modus-themes         ; good colors
         projectile           ; project utilities...I actually forget why I added this
+        request              ; easy http library
         web-mode             ; lots of good web stuff, especially mutli-language buffers
         ))
 
